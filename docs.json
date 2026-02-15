@@ -3086,20 +3086,20 @@
               {
                 "group": "Basics",
                 "pages": [
-                  "examples/quickstart/overview",
-                  "examples/quickstart/agent-with-tools",
-                  "examples/quickstart/agent-with-structured-output",
-                  "examples/quickstart/agent-with-typed-input-output",
-                  "examples/quickstart/agent-with-storage",
-                  "examples/quickstart/agent-with-memory",
-                  "examples/quickstart/agent-with-state-management",
-                  "examples/quickstart/agent-search-over-knowledge",
-                  "examples/quickstart/custom-tool-for-self-learning",
-                  "examples/quickstart/agent-with-guardrails",
-                  "examples/quickstart/human-in-the-loop",
-                  "examples/quickstart/multi-agent-team",
-                  "examples/quickstart/sequential-workflow",
-                  "examples/quickstart/run"
+                  "examples/basics/overview",
+                  "examples/basics/agent-with-tools",
+                  "examples/basics/agent-with-structured-output",
+                  "examples/basics/agent-with-typed-input-output",
+                  "examples/basics/agent-with-storage",
+                  "examples/basics/agent-with-memory",
+                  "examples/basics/agent-with-state-management",
+                  "examples/basics/agent-search-over-knowledge",
+                  "examples/basics/custom-tool-for-self-learning",
+                  "examples/basics/agent-with-guardrails",
+                  "examples/basics/human-in-the-loop",
+                  "examples/basics/multi-agent-team",
+                  "examples/basics/sequential-workflow",
+                  "examples/basics/run"
                 ]
               }
             ]
@@ -3112,11 +3112,11 @@
                 "pages": [
                   "examples/agents/overview",
                   {
-                    "group": "Getting Started",
+                    "group": "Basics",
                     "pages": [
-                      "examples/agents/quickstart/basic-agent",
-                      "examples/agents/quickstart/agent-with-instructions",
-                      "examples/agents/quickstart/agent-with-tools"
+                      "examples/agents/basics/basic-agent",
+                      "examples/agents/basics/agent-with-instructions",
+                      "examples/agents/basics/agent-with-tools"
                     ]
                   },
                   {
@@ -3288,20 +3288,20 @@
                 "pages": [
                   "examples/teams/overview",
                   {
-                    "group": "Getting Started",
+                    "group": "Basics",
                     "pages": [
-                      "examples/teams/quickstart/overview",
-                      "examples/teams/quickstart/basic-coordination",
-                      "examples/teams/quickstart/broadcast-mode",
-                      "examples/teams/quickstart/task-mode",
-                      "examples/teams/quickstart/respond-directly-router-team",
-                      "examples/teams/quickstart/delegate-to-all-members",
-                      "examples/teams/quickstart/share-member-interactions",
-                      "examples/teams/quickstart/concurrent-member-agents",
-                      "examples/teams/quickstart/history-of-members",
-                      "examples/teams/quickstart/respond-directly-with-history",
-                      "examples/teams/quickstart/team-history",
-                      "examples/teams/quickstart/nested-teams"
+                      "examples/teams/basics/overview",
+                      "examples/teams/basics/basic-coordination",
+                      "examples/teams/basics/broadcast-mode",
+                      "examples/teams/basics/task-mode",
+                      "examples/teams/basics/respond-directly-router-team",
+                      "examples/teams/basics/delegate-to-all-members",
+                      "examples/teams/basics/share-member-interactions",
+                      "examples/teams/basics/concurrent-member-agents",
+                      "examples/teams/basics/history-of-members",
+                      "examples/teams/basics/respond-directly-with-history",
+                      "examples/teams/basics/team-history",
+                      "examples/teams/basics/nested-teams"
                     ]
                   },
                   {
