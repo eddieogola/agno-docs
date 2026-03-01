@@ -1807,6 +1807,20 @@
                                 ]
                               }
                             ]
+                          },
+                          {
+                            "group": "Tzafon",
+                            "pages": [
+                              "models/providers/gateways/tzafon/overview",
+                              {
+                                "group": "Usage",
+                                "pages": [
+                                  "models/providers/gateways/tzafon/usage/basic",
+                                  "models/providers/gateways/tzafon/usage/basic-stream",
+                                  "models/providers/gateways/tzafon/usage/tool-use"
+                                ]
+                              }
+                            ]
                           }
                         ]
                       },
@@ -6519,11 +6533,11 @@
                   "examples/tools/tool-hooks/tool-hook-in-toolkit-with-state",
                   "examples/tools/tool-hooks/tool-hook-in-toolkit-with-state-nested",
                   "examples/tools/tool-hooks/tool-hooks-in-toolkit-nested"
-                ]
-              },
-              {
+            ]
+          },
+          {
                 "group": "Handling Tool Errors",
-                "pages": [
+            "pages": [
                   "examples/tools/exceptions/overview",
                   "examples/tools/exceptions/retry-tool-call",
                   "examples/tools/exceptions/retry-tool-call-from-post-hook",
@@ -6542,32 +6556,32 @@
                   "examples/tools/tool-decorator/cache-tool-calls",
                   "examples/tools/tool-decorator/stop-after-tool-call"
                 ]
-              },
-              {
+          },
+          {
                 "group": "MCP",
-                "pages": [
+            "pages": [
                   "examples/tools/mcp/overview",
-                  {
+              {
                     "group": "MCP Toolbox",
-                    "pages": [
+                "pages": [
                       "examples/tools/mcp/mcp-toolbox-demo/overview",
                       "examples/tools/mcp/mcp-toolbox-demo/agent",
                       "examples/tools/mcp/mcp-toolbox-demo/agent-os",
                       "examples/tools/mcp/mcp-toolbox-demo/hotel-management-typesafe",
                       "examples/tools/mcp/mcp-toolbox-demo/hotel-management-workflows"
-                    ]
-                  },
-                  {
+                ]
+              },
+              {
                     "group": "Dynamic Headers",
-                    "pages": [
+                "pages": [
                       "examples/tools/mcp/dynamic-headers/overview",
                       "examples/tools/mcp/dynamic-headers/client",
                       "examples/tools/mcp/dynamic-headers/server"
-                    ]
-                  },
-                  {
+                ]
+              },
+              {
                     "group": "Local Server",
-                    "pages": [
+                "pages": [
                     "examples/tools/mcp/local-server/overview",
                     "examples/tools/mcp/local-server/client",
                     "examples/tools/mcp/local-server/server"
@@ -6885,11 +6899,11 @@
                       "examples/agent-os/dbs/surreal-db/run",
                       "examples/agent-os/dbs/surreal-db/teams",
                       "examples/agent-os/dbs/surreal-db/workflows"
-                    ]
-                  },
-                  {
-                    "group": "Integrations",
-                    "pages": [
+                ]
+              },
+              {
+                "group": "Integrations",
+                "pages": [
                       "examples/agent-os/integrations/overview",
                       "examples/agent-os/integrations/shopify-demo"
                     ]
@@ -7048,7 +7062,7 @@
                       "examples/agent-os/tracing/dbs/basic-agent-with-sqlite",
                       "examples/agent-os/tracing/tracing-with-multi-db-and-tracing-flag",
                       "examples/agent-os/tracing/tracing-with-multi-db-scenario"
-                    ]
+                ]
                   },
                   {
                     "group": "Workflow",
@@ -7130,20 +7144,20 @@
                       "examples/reasoning/models/openai/reasoning-summary",
                       "examples/reasoning/models/vertex-ai/basic-reasoning-stream",
                       "examples/reasoning/models/xai/reasoning-effort"
-                    ]
-                  },
-                  {
-                    "group": "Teams",
-                    "pages": [
+            ]
+          },
+          {
+            "group": "Teams",
+            "pages": [
                       "examples/reasoning/teams/overview",
                       "examples/reasoning/teams/finance-team-chain-of-thought",
                       "examples/reasoning/teams/knowledge-tool-team",
                       "examples/reasoning/teams/reasoning-finance-team"
                     ]
                   },
-                  {
+              {
                     "group": "Tools",
-                    "pages": [
+                "pages": [
                       "examples/reasoning/tools/overview",
                       "examples/reasoning/tools/azure-openai-reasoning-tools",
                       "examples/reasoning/tools/capture-reasoning-content-knowledge-tools",
@@ -7488,6 +7502,7 @@
                   "reference/models/perplexity",
                   "reference/models/requesty",
                   "reference/models/together",
+                  "reference/models/tzafon",
                   "reference/models/xai",
                   "reference/models/vercel",
                   "reference/models/bedrock",
@@ -7757,9 +7772,9 @@
                   "reference-api/schema/database/migrate-database"
                 ]
               },
-              {
+                  {
                 "group": "Components",
-                "pages": [
+                    "pages": [
                   "reference-api/schema/components/list-components",
                   "reference-api/schema/components/create-component",
                   "reference-api/schema/components/get-component",
@@ -7772,17 +7787,17 @@
                   "reference-api/schema/components/update-draft-config",
                   "reference-api/schema/components/get-current-config",
                   "reference-api/schema/components/set-current-config-version"
-                ]
-              },
-              {
+                    ]
+                  },
+                  {
                 "group": "Registry",
-                "pages": [
+                    "pages": [
                   "reference-api/schema/registry/list-registry"
-                ]
-              },
-              {
+                    ]
+                  },
+                  {
                 "group": "Schedules",
-                "pages": [
+                    "pages": [
                   "reference-api/schema/schedules/list-schedules",
                   "reference-api/schema/schedules/create-schedule",
                   "reference-api/schema/schedules/get-schedule",
