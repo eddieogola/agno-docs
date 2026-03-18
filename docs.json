@@ -4138,6 +4138,12 @@
                         ]
                       }
                     ]
+                  },
+                  {
+                    "group": "Governance",
+                    "pages": [
+                      "integrations/governance/agentsystems-notary"
+                    ]
                   }
                 ]
               },
