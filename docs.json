@@ -10,10 +10,10 @@
   "favicon": "/favicon.png",
   "contextual": {
     "options": [
-      "copy", 
-      "mcp", 
+      "copy",
+      "mcp",
       "cursor", 
-      "chatgpt", 
+      "chatgpt",
       "claude"
     ]
   },
