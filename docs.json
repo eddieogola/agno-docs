@@ -9,13 +9,7 @@
   },
   "favicon": "/favicon.png",
   "contextual": {
-    "options": [
-      "copy",
-      "mcp",
-      "cursor",
-      "chatgpt",
-      "claude"
-    ]
+    "options": ["copy", "mcp", "cursor", "chatgpt", "claude"]
   },
   "logo": {
     "light": "/logo/black.svg",
@@ -80,9 +74,7 @@
         "groups": [
           {
             "group": "Overview",
-            "pages": [
-              "index"
-            ]
+            "pages": ["index"]
           }
         ]
       },
@@ -91,10 +83,7 @@
         "groups": [
           {
             "group": "Get Started",
-            "pages": [
-              "introduction",
-              "first-agent"
-            ]
+            "pages": ["introduction", "first-agent"]
           },
           {
             "group": "Basics",
@@ -113,7 +102,8 @@
                       "agents/usage/agent-with-structured-output",
                       "agents/usage/agent-with-storage",
                       "agents/usage/agent-with-memory",
-                      "agents/usage/agent-with-knowledge"
+                      "agents/usage/agent-with-knowledge",
+                      "agents/usage/agent-with-followup-suggestions"
                     ]
                   }
                 ]
@@ -131,7 +121,8 @@
                     "pages": [
                       "teams/usage/basic-team",
                       "teams/usage/streaming",
-                      "teams/usage/respond-directly"
+                      "teams/usage/respond-directly",
+                      "teams/usage/team-with-followup-suggestions"
                     ]
                   }
                 ]
@@ -186,6 +177,7 @@
                           "workflows/usage/parallel-steps-workflow",
                           "workflows/usage/condition-steps-workflow-stream",
                           "workflows/usage/loop-steps-workflow",
+                          "workflows/usage/loop-iterative-accumulation",
                           "workflows/usage/router-steps-workflow"
                         ]
                       },
@@ -489,15 +481,11 @@
                       },
                       {
                         "group": "Supabase",
-                        "pages": [
-                          "database/providers/supabase/overview"
-                        ]
+                        "pages": ["database/providers/supabase/overview"]
                       },
                       {
                         "group": "Neon",
-                        "pages": [
-                          "database/providers/neon/overview"
-                        ]
+                        "pages": ["database/providers/neon/overview"]
                       },
                       "database/providers/selecting-tables"
                     ]
@@ -597,7 +585,9 @@
                       "knowledge/concepts/readers/overview",
                       "knowledge/concepts/chunking/overview",
                       "knowledge/concepts/embedder/overview",
-                      "knowledge/concepts/filters/overview"
+                      "knowledge/concepts/filters/overview",
+                      "knowledge/concepts/isolate-vector-search",
+                      "knowledge/concepts/cloud-storage"
                     ]
                   },
                   {
@@ -626,6 +616,7 @@
                         "group": "Readers",
                         "pages": [
                           "knowledge/concepts/readers/pdf-reader",
+                          "knowledge/concepts/readers/docling-reader",
                           "knowledge/concepts/readers/csv-reader",
                           "knowledge/concepts/readers/json-reader",
                           "knowledge/concepts/readers/markdown-reader",
@@ -1928,6 +1919,7 @@
                           "tools/toolkits/search/hackernews",
                           "tools/toolkits/search/linkup",
                           "tools/toolkits/search/parallel",
+                          "tools/toolkits/search/perplexity",
                           "tools/toolkits/search/pubmed",
                           "tools/toolkits/search/searxng",
                           "tools/toolkits/search/seltz",
@@ -2034,6 +2026,7 @@
                           "tools/toolkits/others/dalle",
                           "tools/toolkits/others/daytona",
                           "tools/toolkits/others/desi-vocal",
+                          "tools/toolkits/others/docling",
                           "tools/toolkits/others/eleven-labs",
                           "tools/toolkits/others/e2b",
                           "tools/toolkits/others/evm",
@@ -2041,9 +2034,11 @@
                           "tools/toolkits/others/financial-datasets",
                           "tools/toolkits/others/giphy",
                           "tools/toolkits/others/github",
+                          "tools/toolkits/others/gitlab",
                           "tools/toolkits/others/google-maps",
                           "tools/toolkits/others/googlecalendar",
                           "tools/toolkits/others/google-sheets",
+                          "tools/toolkits/others/google-slides",
                           "tools/toolkits/others/jira",
                           "tools/toolkits/others/knowledge",
                           "tools/toolkits/others/linear",
@@ -2120,9 +2115,7 @@
                           "sessions/metrics/team",
                           {
                             "group": "Usage",
-                            "pages": [
-                              "sessions/metrics/usage/team-metrics"
-                            ]
+                            "pages": ["sessions/metrics/usage/team-metrics"]
                           }
                         ]
                       },
@@ -2235,10 +2228,7 @@
               {
                 "group": "Context Compression",
                 "tag": "BETA",
-                "pages": [
-                  "compression/overview",
-                  "compression/token-counting"
-                ]
+                "pages": ["compression/overview", "compression/token-counting"]
               },
               {
                 "group": "Dependency Injection",
@@ -2300,83 +2290,6 @@
                 ]
               },
               {
-                "group": "Guardrails",
-                "pages": [
-                  "guardrails/overview",
-                  {
-                    "group": "Included Guardrails",
-                    "pages": [
-                      "guardrails/included/prompt-injection",
-                      "guardrails/included/pii",
-                      "guardrails/included/openai-moderation"
-                    ]
-                  },
-                  {
-                    "group": "Agent",
-                    "pages": [
-                      "guardrails/usage/agent/pii-detection",
-                      "guardrails/usage/agent/prompt-injection",
-                      "guardrails/usage/agent/openai-moderation"
-                    ]
-                  },
-                  {
-                    "group": "Team",
-                    "pages": [
-                      "guardrails/usage/team/pii-detection",
-                      "guardrails/usage/team/prompt-injection",
-                      "guardrails/usage/team/openai-moderation"
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "Human-in-the-Loop",
-                "pages": [
-                  "hitl/overview",
-                  "hitl/user-confirmation",
-                  "hitl/user-input",
-                  "hitl/dynamic-user-input",
-                  "hitl/external-execution",
-                  {
-                    "group": "Usage",
-                    "pages": [
-                      "hitl/usage/agentic-user-input",
-                      {
-                        "group": "Confirmation Required",
-                        "pages": [
-                          "hitl/usage/confirmation-required",
-                          "hitl/usage/confirmation-required-async",
-                          "hitl/usage/confirmation-required-mixed-tools",
-                          "hitl/usage/confirmation-required-multiple-tools",
-                          "hitl/usage/confirmation-required-stream-async",
-                          "hitl/usage/confirmation-required-toolkit",
-                          "hitl/usage/confirmation-required-with-history",
-                          "hitl/usage/confirmation-required-with-run-id"
-                        ]
-                      },
-                      {
-                        "group": "User Input Required",
-                        "pages": [
-                          "hitl/usage/user-input-required",
-                          "hitl/usage/user-input-required-all-fields",
-                          "hitl/usage/user-input-required-async",
-                          "hitl/usage/user-input-required-stream-async"
-                        ]
-                      },
-                      {
-                        "group": "External Tool Execution",
-                        "pages": [
-                          "hitl/usage/external-tool-execution",
-                          "hitl/usage/external-tool-execution-async",
-                          "hitl/usage/external-tool-execution-stream-async",
-                          "hitl/usage/external-tool-execution-toolkit"
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
                 "group": "Run Cancellation",
                 "pages": [
                   "run-cancellation/overview",
@@ -2433,9 +2346,7 @@
                           },
                           {
                             "group": "Ollama",
-                            "pages": [
-                              "reasoning/usage/models/ollama/ollama"
-                            ]
+                            "pages": ["reasoning/usage/models/ollama/ollama"]
                           },
                           {
                             "group": "OpenAI",
@@ -2553,9 +2464,7 @@
                       },
                       {
                         "group": "Files",
-                        "pages": [
-                          "multimodal/agent/usage/file-input-for-tool"
-                        ]
+                        "pages": ["multimodal/agent/usage/file-input-for-tool"]
                       }
                     ]
                   },
@@ -2583,150 +2492,6 @@
                         "group": "Video",
                         "pages": [
                           "multimodal/team/usage/video-caption-generation"
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "Tracing",
-                "pages": [
-                  "state/overview",
-                  {
-                    "group": "For Agents",
-                    "pages": [
-                      "state/agent/overview",
-                      "state/agent/session-state-basic",
-                      "state/agent/session-state-in-instructions",
-                      "state/agent/session-state-in-context",
-                      "state/agent/session-state-advanced",
-                      "state/agent/session-state-multiple-users",
-                      "state/agent/agentic-session-state",
-                      "state/agent/dynamic-session-state",
-                      "state/agent/change-state-on-run",
-                      "state/agent/last-n-session-messages"
-                    ]
-                  },
-                  {
-                    "group": "For Teams",
-                    "pages": [
-                      "state/team/overview",
-                      "state/team/agentic-session-state",
-                      "state/team/change-state-on-run",
-                      "state/team/session-state-in-instructions",
-                      "state/team/share-member-interactions"
-                    ]
-                  },
-                  {
-                    "group": "For Workflows",
-                    "pages": [
-                      "state/workflows/overview",
-                      "state/workflows/access-session-state-in-custom-python-function-step",
-                      "state/workflows/access-session-state-in-condition-evaluator-function",
-                      "state/workflows/access-session-state-in-router-selector-function"
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "Context Management",
-                "pages": [
-                  "context/overview",
-                  {
-                    "group": "For Agents",
-                    "pages": [
-                      "context/agent/overview",
-                      "context/agent/instructions",
-                      "context/agent/dynamic-instructions",
-                      "context/agent/instructions-via-function",
-                      "context/agent/few-shot-learning",
-                      "context/agent/datetime-instructions",
-                      "context/agent/location-instructions",
-                      "context/agent/filter-tool-calls-from-history"
-                    ]
-                  },
-                  {
-                    "group": "For Teams",
-                    "pages": [
-                      "context/team/overview",
-                      "context/team/filter-tool-calls-from-history"
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "Chat History",
-                "pages": [
-                  "history/overview",
-                  {
-                    "group": "For Agents",
-                    "pages": [
-                      "history/agent/overview",
-                      "history/agent/chat-history"
-                    ]
-                  },
-                  {
-                    "group": "For Teams",
-                    "pages": [
-                      "history/team/overview",
-                      "history/team/respond-directly-with-history",
-                      "history/team/team-history",
-                      "history/team/history-of-members",
-                      "history/team/share-member-interactions"
-                    ]
-                  },
-                  {
-                    "group": "For Workflows",
-                    "pages": [
-                      "history/workflow/overview",
-                      "history/workflow/single-step-continuous-execution-workflow",
-                      "history/workflow/workflow-with-history-enabled-for-steps",
-                      "history/workflow/enable-history-for-step",
-                      "history/workflow/get-history-in-function",
-                      "history/workflow/multi-purpose-cli",
-                      "history/workflow/intent-routing-with-history"
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "Context Compression",
-                "tag": "BETA",
-                "pages": [
-                  "compression/overview",
-                  "compression/token-counting"
-                ]
-              },
-              {
-                "group": "Dependency Injection",
-                "pages": [
-                  "dependencies/overview",
-                  {
-                    "group": "For Agents",
-                    "pages": [
-                      "dependencies/agent/overview",
-                      {
-                        "group": "Usage",
-                        "pages": [
-                          "dependencies/agent/add-dependencies-run",
-                          "dependencies/agent/add-dependencies-to-context",
-                          "dependencies/agent/access-dependencies-in-tool"
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "group": "For Teams",
-                    "pages": [
-                      "dependencies/team/overview",
-                      {
-                        "group": "Usage",
-                        "pages": [
-                          "dependencies/team/add-dependencies-run",
-                          "dependencies/team/add-dependencies-to-context",
-                          "dependencies/team/reference-dependencies",
-                          "dependencies/team/access-dependencies-in-tool"
                         ]
                       }
                     ]
@@ -2780,9 +2545,38 @@
                   {
                     "group": "Usage",
                     "pages": [
-                      "tracing/usage/basic-agent-tracing",
-                      "tracing/usage/basic-team-tracing",
-                      "tracing/usage/basic-workflow-tracing"
+                      "hitl/usage/agentic-user-input",
+                      {
+                        "group": "Confirmation Required",
+                        "pages": [
+                          "hitl/usage/confirmation-required",
+                          "hitl/usage/confirmation-required-async",
+                          "hitl/usage/confirmation-required-mixed-tools",
+                          "hitl/usage/confirmation-required-multiple-tools",
+                          "hitl/usage/confirmation-required-stream-async",
+                          "hitl/usage/confirmation-required-toolkit",
+                          "hitl/usage/confirmation-required-with-history",
+                          "hitl/usage/confirmation-required-with-run-id"
+                        ]
+                      },
+                      {
+                        "group": "User Input Required",
+                        "pages": [
+                          "hitl/usage/user-input-required",
+                          "hitl/usage/user-input-required-all-fields",
+                          "hitl/usage/user-input-required-async",
+                          "hitl/usage/user-input-required-stream-async"
+                        ]
+                      },
+                      {
+                        "group": "External Tool Execution",
+                        "pages": [
+                          "hitl/usage/external-tool-execution",
+                          "hitl/usage/external-tool-execution-async",
+                          "hitl/usage/external-tool-execution-stream-async",
+                          "hitl/usage/external-tool-execution-toolkit"
+                        ]
+                      }
                     ]
                   }
                 ]
@@ -2870,30 +2664,6 @@
                 ]
               },
               {
-                "group": "Hooks",
-                "pages": [
-                  "hooks/overview",
-                  {
-                    "group": "Agent",
-                    "pages": [
-                      "hooks/usage/agent/input-validation-pre-hook",
-                      "hooks/usage/agent/input-transformation-pre-hook",
-                      "hooks/usage/agent/output-validation-post-hook",
-                      "hooks/usage/agent/output-transformation-post-hook"
-                    ]
-                  },
-                  {
-                    "group": "Team",
-                    "pages": [
-                      "hooks/usage/team/input-validation-pre-hook",
-                      "hooks/usage/team/input-transformation-pre-hook",
-                      "hooks/usage/team/output-validation-post-hook",
-                      "hooks/usage/team/output-transformation-post-hook"
-                    ]
-                  }
-                ]
-              },
-              {
                 "group": "Tracing",
                 "pages": [
                   "tracing/overview",
@@ -2907,15 +2677,6 @@
                       "tracing/usage/basic-workflow-tracing"
                     ]
                   }
-                ]
-              },
-              {
-                "group": "Run Cancellation",
-                "pages": [
-                  "run-cancellation/overview",
-                  "run-cancellation/agent-cancel-run",
-                  "run-cancellation/team-cancel-run",
-                  "run-cancellation/workflow-cancel-run"
                 ]
               },
               "scheduler/overview"
@@ -4019,15 +3780,11 @@
                   },
                   {
                     "group": "Supabase",
-                    "pages": [
-                      "database/providers/supabase/overview"
-                    ]
+                    "pages": ["database/providers/supabase/overview"]
                   },
                   {
                     "group": "Neon",
-                    "pages": [
-                      "database/providers/neon/overview"
-                    ]
+                    "pages": ["database/providers/neon/overview"]
                   },
                   "database/providers/selecting-tables"
                 ]
@@ -4309,9 +4066,7 @@
               {
                 "group": "Culture",
                 "tag": "experimental",
-                "pages": [
-                  "culture/overview"
-                ]
+                "pages": ["culture/overview"]
               },
               "custom-logging"
             ]
@@ -4334,6 +4089,7 @@
                   "observability/langtrace",
                   "observability/langwatch",
                   "observability/maxim",
+                  "observability/mlflow",
                   "observability/openlit",
                   "observability/traceloop",
                   "observability/weave"
@@ -4344,9 +4100,7 @@
                 "pages": [
                   {
                     "group": "Memory",
-                    "pages": [
-                      "integrations/memory/memori"
-                    ]
+                    "pages": ["integrations/memory/memori"]
                   },
                   {
                     "group": "Discord Bot",
@@ -4368,11 +4122,13 @@
                       "integrations/testing/overview",
                       {
                         "group": "Usage",
-                        "pages": [
-                          "integrations/testing/usage/basic"
-                        ]
+                        "pages": ["integrations/testing/usage/basic"]
                       }
                     ]
+                  },
+                  {
+                    "group": "Governance",
+                    "pages": ["integrations/governance/agentsystems-notary"]
                   }
                 ]
               },
@@ -4381,10 +4137,7 @@
                 "pages": [
                   {
                     "group": "Agno v2 Migration",
-                    "pages": [
-                      "other/v2-migration",
-                      "other/v2-changelog"
-                    ]
+                    "pages": ["other/v2-migration", "other/v2-changelog"]
                   },
                   "other/database-migrations",
                   "other/workflows-migration"
@@ -4431,10 +4184,7 @@
               },
               {
                 "group": "MCP",
-                "pages": [
-                  "agent-os/mcp/mcp",
-                  "agent-os/mcp/tools"
-                ]
+                "pages": ["agent-os/mcp/mcp", "agent-os/mcp/tools"]
               },
               {
                 "group": "Middleware",
@@ -4471,6 +4221,7 @@
               "agent-os/config",
               "agent-os/background-tasks/overview",
               "agent-os/scheduler/overview",
+              "agent-os/approvals/overview",
               "agent-os/lifespan",
               {
                 "group": "Clients",
@@ -4499,13 +4250,15 @@
                   "agent-os/interfaces/whatsapp/introduction",
                   "agent-os/interfaces/a2a/introduction",
                   "agent-os/interfaces/ag-ui/introduction",
-                  "agent-os/interfaces/slack/introduction"
+                  "agent-os/interfaces/slack/introduction",
+                  "agent-os/interfaces/telegram/introduction"
                 ]
               },
               {
                 "group": "Tracing",
                 "pages": [
                   "agent-os/tracing/overview",
+                  "agent-os/tracing/filter-options",
                   {
                     "group": "Usage",
                     "pages": [
@@ -4620,6 +4373,20 @@
                       "agent-os/usage/interfaces/slack/reasoning-agent",
                       "agent-os/usage/interfaces/slack/research-workflow"
                     ]
+                  },
+                  {
+                    "group": "Telegram",
+                    "pages": [
+                      "agent-os/usage/interfaces/telegram/basic",
+                      "agent-os/usage/interfaces/telegram/streaming",
+                      "agent-os/usage/interfaces/telegram/team",
+                      "agent-os/usage/interfaces/telegram/agent-with-media",
+                      "agent-os/usage/interfaces/telegram/agent-with-user-memory",
+                      "agent-os/usage/interfaces/telegram/reasoning-agent",
+                      "agent-os/usage/interfaces/telegram/workflow",
+                      "agent-os/usage/interfaces/telegram/streaming-workflow",
+                      "agent-os/usage/interfaces/telegram/multiple-instances"
+                    ]
                   }
                 ]
               }
@@ -4729,21 +4496,15 @@
               },
               {
                 "group": "Dash",
-                "pages": [
-                  "deploy/templates/dash/overview"
-                ]
+                "pages": ["deploy/templates/dash/overview"]
               },
               {
                 "group": "Scout",
-                "pages": [
-                  "deploy/templates/scout/overview"
-                ]
+                "pages": ["deploy/templates/scout/overview"]
               },
               {
                 "group": "Gcode",
-                "pages": [
-                  "deploy/templates/gcode/overview"
-                ]
+                "pages": ["deploy/templates/gcode/overview"]
               }
             ]
           },
@@ -4767,9 +4528,7 @@
               },
               {
                 "group": "Teams",
-                "pages": [
-                  "deploy/apps/teams/content-team"
-                ]
+                "pages": ["deploy/apps/teams/content-team"]
               },
               {
                 "group": "Workflows",
@@ -4787,39 +4546,27 @@
             "pages": [
               {
                 "group": "Slack",
-                "pages": [
-                  "deploy/interfaces/slack/overview"
-                ]
+                "pages": ["deploy/interfaces/slack/overview"]
               },
               {
                 "group": "Discord",
-                "pages": [
-                  "deploy/interfaces/discord/overview"
-                ]
+                "pages": ["deploy/interfaces/discord/overview"]
               },
               {
                 "group": "WhatsApp",
-                "pages": [
-                  "deploy/interfaces/whatsapp/overview"
-                ]
+                "pages": ["deploy/interfaces/whatsapp/overview"]
               },
               {
                 "group": "MCP",
-                "pages": [
-                  "deploy/interfaces/mcp/overview"
-                ]
+                "pages": ["deploy/interfaces/mcp/overview"]
               },
               {
                 "group": "AG-UI",
-                "pages": [
-                  "deploy/interfaces/ag-ui/overview"
-                ]
+                "pages": ["deploy/interfaces/ag-ui/overview"]
               },
               {
                 "group": "Telegram",
-                "pages": [
-                  "deploy/interfaces/telegram/overview"
-                ]
+                "pages": ["deploy/interfaces/telegram/overview"]
               }
             ]
           }
@@ -5591,6 +5338,10 @@
                       "examples/knowledge/readers/csv-reader-custom-encodings",
                       "examples/knowledge/readers/csv-reader-url-async",
                       "examples/knowledge/readers/doc-kb-async",
+                      "examples/knowledge/readers/docling-reader",
+                      "examples/knowledge/readers/docling-reader-async",
+                      "examples/knowledge/readers/docling-multi-formats",
+                      "examples/knowledge/readers/docling-reader-url",
                       "examples/knowledge/readers/excel-legacy-xls",
                       "examples/knowledge/readers/excel-reader",
                       "examples/knowledge/readers/firecrawl-reader",
@@ -6533,11 +6284,11 @@
                   "examples/tools/tool-hooks/tool-hook-in-toolkit-with-state",
                   "examples/tools/tool-hooks/tool-hook-in-toolkit-with-state-nested",
                   "examples/tools/tool-hooks/tool-hooks-in-toolkit-nested"
-            ]
-          },
-          {
+                ]
+              },
+              {
                 "group": "Handling Tool Errors",
-            "pages": [
+                "pages": [
                   "examples/tools/exceptions/overview",
                   "examples/tools/exceptions/retry-tool-call",
                   "examples/tools/exceptions/retry-tool-call-from-post-hook",
@@ -6556,35 +6307,35 @@
                   "examples/tools/tool-decorator/cache-tool-calls",
                   "examples/tools/tool-decorator/stop-after-tool-call"
                 ]
-          },
-          {
-                "group": "MCP",
-            "pages": [
-                  "examples/tools/mcp/overview",
+              },
               {
-                    "group": "MCP Toolbox",
+                "group": "MCP",
                 "pages": [
+                  "examples/tools/mcp/overview",
+                  {
+                    "group": "MCP Toolbox",
+                    "pages": [
                       "examples/tools/mcp/mcp-toolbox-demo/overview",
                       "examples/tools/mcp/mcp-toolbox-demo/agent",
                       "examples/tools/mcp/mcp-toolbox-demo/agent-os",
                       "examples/tools/mcp/mcp-toolbox-demo/hotel-management-typesafe",
                       "examples/tools/mcp/mcp-toolbox-demo/hotel-management-workflows"
-                ]
-              },
-              {
+                    ]
+                  },
+                  {
                     "group": "Dynamic Headers",
-                "pages": [
+                    "pages": [
                       "examples/tools/mcp/dynamic-headers/overview",
                       "examples/tools/mcp/dynamic-headers/client",
                       "examples/tools/mcp/dynamic-headers/server"
-                ]
-              },
-              {
+                    ]
+                  },
+                  {
                     "group": "Local Server",
-                "pages": [
-                    "examples/tools/mcp/local-server/overview",
-                    "examples/tools/mcp/local-server/client",
-                    "examples/tools/mcp/local-server/server"
+                    "pages": [
+                      "examples/tools/mcp/local-server/overview",
+                      "examples/tools/mcp/local-server/client",
+                      "examples/tools/mcp/local-server/server"
                     ]
                   },
                   {
@@ -6745,6 +6496,7 @@
                   "examples/tools/custom-tool-events",
                   "examples/tools/custom-tools",
                   "examples/tools/daytona-tools",
+                  "examples/tools/docling-tools",
                   "examples/tools/docker-tools",
                   "examples/tools/e2b-tools",
                   "examples/tools/evm-tools",
@@ -6899,11 +6651,11 @@
                       "examples/agent-os/dbs/surreal-db/run",
                       "examples/agent-os/dbs/surreal-db/teams",
                       "examples/agent-os/dbs/surreal-db/workflows"
-                ]
-              },
-              {
-                "group": "Integrations",
-                "pages": [
+                    ]
+                  },
+                  {
+                    "group": "Integrations",
+                    "pages": [
                       "examples/agent-os/integrations/overview",
                       "examples/agent-os/integrations/shopify-demo"
                     ]
@@ -7062,7 +6814,7 @@
                       "examples/agent-os/tracing/dbs/basic-agent-with-sqlite",
                       "examples/agent-os/tracing/tracing-with-multi-db-and-tracing-flag",
                       "examples/agent-os/tracing/tracing-with-multi-db-scenario"
-                ]
+                    ]
                   },
                   {
                     "group": "Workflow",
@@ -7144,20 +6896,20 @@
                       "examples/reasoning/models/openai/reasoning-summary",
                       "examples/reasoning/models/vertex-ai/basic-reasoning-stream",
                       "examples/reasoning/models/xai/reasoning-effort"
-            ]
-          },
-          {
-            "group": "Teams",
-            "pages": [
+                    ]
+                  },
+                  {
+                    "group": "Teams",
+                    "pages": [
                       "examples/reasoning/teams/overview",
                       "examples/reasoning/teams/finance-team-chain-of-thought",
                       "examples/reasoning/teams/knowledge-tool-team",
                       "examples/reasoning/teams/reasoning-finance-team"
                     ]
                   },
-              {
+                  {
                     "group": "Tools",
-                "pages": [
+                    "pages": [
                       "examples/reasoning/tools/overview",
                       "examples/reasoning/tools/azure-openai-reasoning-tools",
                       "examples/reasoning/tools/capture-reasoning-content-knowledge-tools",
@@ -7372,10 +7124,7 @@
               },
               {
                 "group": "Team",
-                "pages": [
-                  "reference/teams/team",
-                  "reference/teams/remote-team"
-                ]
+                "pages": ["reference/teams/team", "reference/teams/remote-team"]
               },
               {
                 "group": "Workflows",
@@ -7428,15 +7177,11 @@
               },
               {
                 "group": "Memory",
-                "pages": [
-                  "reference/memory/memory"
-                ]
+                "pages": ["reference/memory/memory"]
               },
               {
                 "group": "Context Compression",
-                "pages": [
-                  "reference/compression/compression-manager"
-                ]
+                "pages": ["reference/compression/compression-manager"]
               },
               {
                 "group": "Database",
@@ -7458,10 +7203,7 @@
               },
               {
                 "group": "Tracing",
-                "pages": [
-                  "reference/tracing/trace",
-                  "reference/tracing/span"
-                ]
+                "pages": ["reference/tracing/trace", "reference/tracing/span"]
               },
               {
                 "group": "Hooks",
@@ -7572,9 +7314,7 @@
                   },
                   {
                     "group": "Rerankers",
-                    "pages": [
-                      "reference/knowledge/reranker/cohere"
-                    ]
+                    "pages": ["reference/knowledge/reranker/cohere"]
                   },
                   {
                     "group": "Chunking",
@@ -7606,15 +7346,11 @@
               "reference-api/overview",
               {
                 "group": "Home",
-                "pages": [
-                  "reference-api/schema/home/api-information"
-                ]
+                "pages": ["reference-api/schema/home/api-information"]
               },
               {
                 "group": "Health",
-                "pages": [
-                  "reference-api/schema/health/health-check"
-                ]
+                "pages": ["reference-api/schema/health/health-check"]
               },
               {
                 "group": "Core",
@@ -7658,9 +7394,7 @@
               },
               {
                 "group": "Slack",
-                "pages": [
-                  "reference-api/schema/slack/slack-events"
-                ]
+                "pages": ["reference-api/schema/slack/slack-events"]
               },
               {
                 "group": "Whatsapp",
@@ -7772,9 +7506,9 @@
                   "reference-api/schema/database/migrate-database"
                 ]
               },
-                  {
+              {
                 "group": "Components",
-                    "pages": [
+                "pages": [
                   "reference-api/schema/components/list-components",
                   "reference-api/schema/components/create-component",
                   "reference-api/schema/components/get-component",
@@ -7787,17 +7521,15 @@
                   "reference-api/schema/components/update-draft-config",
                   "reference-api/schema/components/get-current-config",
                   "reference-api/schema/components/set-current-config-version"
-                    ]
-                  },
-                  {
+                ]
+              },
+              {
                 "group": "Registry",
-                    "pages": [
-                  "reference-api/schema/registry/list-registry"
-                    ]
-                  },
-                  {
+                "pages": ["reference-api/schema/registry/list-registry"]
+              },
+              {
                 "group": "Schedules",
-                    "pages": [
+                "pages": [
                   "reference-api/schema/schedules/list-schedules",
                   "reference-api/schema/schedules/create-schedule",
                   "reference-api/schema/schedules/get-schedule",
@@ -7816,6 +7548,7 @@
                   "reference-api/schema/approvals/list-approvals",
                   "reference-api/schema/approvals/get-approval-count",
                   "reference-api/schema/approvals/get-approval",
+                  "reference-api/schema/approvals/get-approval-status",
                   "reference-api/schema/approvals/delete-approval",
                   "reference-api/schema/approvals/resolve-approval"
                 ]
@@ -7871,7 +7604,7 @@
     },
     {
       "source": "/get-started",
-      "destination": "/get-started/quickstart"
+      "destination": "/first-agent"
     },
     {
       "source": "/introduction/monitoring",
@@ -8039,7 +7772,7 @@
     },
     {
       "source": "/features/multimodal/speech-to-text",
-      "destination": "/multimodal/audio/speech-to-text"
+      "destination": "/multimodal/overview"
     },
     {
       "source": "/features/reasoning/introduction",
@@ -9199,7 +8932,7 @@
     },
     {
       "source": "/context/learning/getting-started",
-      "destination": "/learning/getting-started"
+      "destination": "/learning/overview"
     },
     {
       "source": "/context/learning/custom-schemas",
@@ -11463,7 +11196,7 @@
     },
     {
       "source": "/integrations/models/local/ollama/usage/db",
-      "destination": "/models/providers/local/ollama/usage/db"
+      "destination": "/models/providers/local/ollama/overview"
     },
     {
       "source": "/integrations/models/openai-like",
@@ -12306,6 +12039,10 @@
       "destination": "/tools/toolkits/others/github"
     },
     {
+      "source": "/integrations/toolkits/others/gitlab",
+      "destination": "/tools/toolkits/others/gitlab"
+    },
+    {
       "source": "/integrations/toolkits/others/composio",
       "destination": "/tools/toolkits/others/composio"
     },
@@ -12691,27 +12428,27 @@
     },
     {
       "source": "/features/multimodal/video/video_input",
-      "destination": "/multimodal/video/video_input"
+      "destination": "/multimodal/agent/usage/video_input"
     },
     {
       "source": "/features/multimodal/video/video_generation",
-      "destination": "/multimodal/video/video_generation"
+      "destination": "/multimodal/agent/usage/video_generation"
     },
     {
       "source": "/features/multimodal/video/usage/video-to-shorts",
-      "destination": "/multimodal/video/usage/video-to-shorts"
+      "destination": "/multimodal/agent/usage/video_input"
     },
     {
       "source": "/features/multimodal/video/usage/generate-video-replicate",
-      "destination": "/multimodal/video/usage/generate-video-replicate"
+      "destination": "/multimodal/agent/usage/video_generation"
     },
     {
       "source": "/features/multimodal/video/usage/generate-video-models-lab",
-      "destination": "/multimodal/video/usage/generate-video-models-lab"
+      "destination": "/multimodal/agent/usage/video_generation"
     },
     {
       "source": "/features/multimodal/video/usage/video-caption",
-      "destination": "/multimodal/video/usage/video-caption"
+      "destination": "/multimodal/agent/usage/video-caption"
     },
     {
       "source": "/features/multimodal/overview",
@@ -12719,31 +12456,31 @@
     },
     {
       "source": "/features/multimodal/images/image-output",
-      "destination": "/multimodal/images/image-output"
+      "destination": "/multimodal/agent/usage/image-output"
     },
     {
       "source": "/features/multimodal/images/usage/image-to-audio",
-      "destination": "/multimodal/images/usage/image-to-audio"
+      "destination": "/multimodal/agent/usage/image-input"
     },
     {
       "source": "/features/multimodal/images/usage/image-to-text",
-      "destination": "/multimodal/images/usage/image-to-text"
+      "destination": "/multimodal/agent/usage/image-input"
     },
     {
       "source": "/features/multimodal/images/usage/image-to-image",
-      "destination": "/multimodal/images/usage/image-to-image"
+      "destination": "/multimodal/agent/usage/image-input"
     },
     {
       "source": "/features/multimodal/images/usage/generate-image",
-      "destination": "/multimodal/images/usage/generate-image"
+      "destination": "/multimodal/agent/usage/generate-image"
     },
     {
       "source": "/features/multimodal/images/image-generation",
-      "destination": "/multimodal/images/image-generation"
+      "destination": "/multimodal/agent/usage/image-generation"
     },
     {
       "source": "/features/multimodal/images/image-input",
-      "destination": "/multimodal/images/image-input"
+      "destination": "/multimodal/agent/usage/image-input"
     },
     {
       "source": "/features/multimodal/agent/overview",
@@ -12779,7 +12516,7 @@
     },
     {
       "source": "/features/multimodal/agent/usage/video-caption-agent",
-      "destination": "/multimodal/agent/usage/video-caption-agent"
+      "destination": "/multimodal/agent/usage/video-caption"
     },
     {
       "source": "/features/multimodal/agent/usage/video-to-shorts",
@@ -12827,47 +12564,47 @@
     },
     {
       "source": "/features/multimodal/audio/audio_output",
-      "destination": "/multimodal/audio/audio_output"
+      "destination": "/multimodal/agent/usage/audio_output"
     },
     {
       "source": "/features/multimodal/audio/usage/audio-sentiment-analysis",
-      "destination": "/multimodal/audio/usage/audio-sentiment-analysis"
+      "destination": "/multimodal/agent/usage/audio_input"
     },
     {
       "source": "/features/multimodal/audio/usage/audio-input-output",
-      "destination": "/multimodal/audio/usage/audio-input-output"
+      "destination": "/multimodal/agent/usage/audio_input"
     },
     {
       "source": "/features/multimodal/audio/usage/generate-music-agent",
-      "destination": "/multimodal/audio/usage/generate-music-agent"
+      "destination": "/multimodal/agent/usage/generate-music-agent"
     },
     {
       "source": "/features/multimodal/audio/usage/audio-streaming",
-      "destination": "/multimodal/audio/usage/audio-streaming"
+      "destination": "/multimodal/agent/usage/audio_output"
     },
     {
       "source": "/features/multimodal/audio/usage/blog-to-podcast",
-      "destination": "/multimodal/audio/usage/blog-to-podcast"
+      "destination": "/multimodal/agent/usage/blog-to-podcast"
     },
     {
       "source": "/features/multimodal/audio/usage/audio-to-text",
-      "destination": "/multimodal/audio/usage/audio-to-text"
+      "destination": "/multimodal/agent/usage/audio_input"
     },
     {
       "source": "/features/multimodal/audio/usage/audio-multi-turn",
-      "destination": "/multimodal/audio/usage/audio-multi-turn"
+      "destination": "/multimodal/agent/usage/audio_input"
     },
     {
       "source": "/features/multimodal/audio/audio_input",
-      "destination": "/multimodal/audio/audio_input"
+      "destination": "/multimodal/agent/usage/audio_input"
     },
     {
       "source": "/features/multimodal/audio/speech-to-text",
-      "destination": "/multimodal/audio/speech-to-text"
+      "destination": "/multimodal/overview"
     },
     {
       "source": "/features/multimodal/audio/audio_generation",
-      "destination": "/multimodal/audio/audio_generation"
+      "destination": "/multimodal/agent/usage/audio_generation"
     },
     {
       "source": "/features/multimodal/team/overview",
@@ -12903,11 +12640,11 @@
     },
     {
       "source": "/features/multimodal/files/file_generation",
-      "destination": "/multimodal/files/file_generation"
+      "destination": "/multimodal/agent/usage/file_generation"
     },
     {
       "source": "/features/multimodal/files/file_input",
-      "destination": "/multimodal/files/file_input"
+      "destination": "/multimodal/agent/usage/file_input"
     },
     {
       "source": "/knowledge/what-is-knowledge",
@@ -12915,7 +12652,7 @@
     },
     {
       "source": "/get-started/quickstart",
-      "destination": "/quickstart"
+      "destination": "/first-agent"
     },
     {
       "source": "/quickstart",
@@ -12924,6 +12661,2714 @@
     {
       "source": "/get-started/getting-help",
       "destination": "/get-help"
+    },
+    {
+      "source": "/agent-os/your-first-os",
+      "destination": "/agent-os/run-your-os"
+    },
+    {
+      "source": "/basics/agent-ui/overview",
+      "destination": "/other/agent-ui"
+    },
+    {
+      "source": "/basics/agents/usage/structured-output",
+      "destination": "/agents/usage/agent-with-structured-output"
+    },
+    {
+      "source": "/basics/agents/usage/tools",
+      "destination": "/agents/usage/agent-with-tools"
+    },
+    {
+      "source": "/basics/chat-history/agent/overview",
+      "destination": "/history/agent/overview"
+    },
+    {
+      "source": "/basics/chat-history/agent/usage/chat-history",
+      "destination": "/history/agent/chat-history"
+    },
+    {
+      "source": "/basics/chat-history/agent/usage/persistent-session-history",
+      "destination": "/history/agent/persistent-session-history"
+    },
+    {
+      "source": "/basics/chat-history/overview",
+      "destination": "/history/overview"
+    },
+    {
+      "source": "/basics/chat-history/team/overview",
+      "destination": "/history/team/overview"
+    },
+    {
+      "source": "/basics/chat-history/team/usage/history-of-members",
+      "destination": "/history/team/history-of-members"
+    },
+    {
+      "source": "/basics/chat-history/team/usage/respond-directly-with-history",
+      "destination": "/history/team/respond-directly-with-history"
+    },
+    {
+      "source": "/basics/chat-history/team/usage/share-member-interactions",
+      "destination": "/history/team/share-member-interactions"
+    },
+    {
+      "source": "/basics/chat-history/team/usage/team-history",
+      "destination": "/history/team/team-history"
+    },
+    {
+      "source": "/basics/chat-history/workflow/overview",
+      "destination": "/history/workflow/overview"
+    },
+    {
+      "source": "/basics/chat-history/workflow/usage/enable-history-for-step",
+      "destination": "/history/workflow/enable-history-for-step"
+    },
+    {
+      "source": "/basics/chat-history/workflow/usage/get-history-in-function",
+      "destination": "/history/workflow/get-history-in-function"
+    },
+    {
+      "source": "/basics/chat-history/workflow/usage/intent-routing-with-history",
+      "destination": "/history/workflow/intent-routing-with-history"
+    },
+    {
+      "source": "/basics/chat-history/workflow/usage/multi-purpose-cli",
+      "destination": "/history/workflow/multi-purpose-cli"
+    },
+    {
+      "source": "/basics/chat-history/workflow/usage/single-step-continuous-execution-workflow",
+      "destination": "/history/workflow/single-step-continuous-execution-workflow"
+    },
+    {
+      "source": "/basics/chat-history/workflow/usage/workflow-with-history-enabled-for-steps",
+      "destination": "/history/workflow/workflow-with-history-enabled-for-steps"
+    },
+    {
+      "source": "/basics/context-compression/overview",
+      "destination": "/compression/overview"
+    },
+    {
+      "source": "/basics/context-compression/token-counting",
+      "destination": "/compression/token-counting"
+    },
+    {
+      "source": "/basics/context/agent/overview",
+      "destination": "/context/agent/overview"
+    },
+    {
+      "source": "/basics/context/agent/usage/datetime-instructions",
+      "destination": "/context/agent/datetime-instructions"
+    },
+    {
+      "source": "/basics/context/agent/usage/dynamic-instructions",
+      "destination": "/context/agent/dynamic-instructions"
+    },
+    {
+      "source": "/basics/context/agent/usage/few-shot-learning",
+      "destination": "/context/agent/few-shot-learning"
+    },
+    {
+      "source": "/basics/context/agent/usage/filter-tool-calls-from-history",
+      "destination": "/context/agent/filter-tool-calls-from-history"
+    },
+    {
+      "source": "/basics/context/agent/usage/instructions",
+      "destination": "/context/agent/instructions"
+    },
+    {
+      "source": "/basics/context/agent/usage/instructions-via-function",
+      "destination": "/context/agent/instructions-via-function"
+    },
+    {
+      "source": "/basics/context/agent/usage/location-instructions",
+      "destination": "/context/agent/location-instructions"
+    },
+    {
+      "source": "/basics/context/overview",
+      "destination": "/context/overview"
+    },
+    {
+      "source": "/basics/context/team/overview",
+      "destination": "/context/team/overview"
+    },
+    {
+      "source": "/basics/context/team/usage/filter-tool-calls-from-history",
+      "destination": "/context/team/filter-tool-calls-from-history"
+    },
+    {
+      "source": "/basics/culture/overview",
+      "destination": "/culture/overview"
+    },
+    {
+      "source": "/basics/custom-logging",
+      "destination": "/custom-logging"
+    },
+    {
+      "source": "/basics/database/migrations",
+      "destination": "/other/database-migrations"
+    },
+    {
+      "source": "/basics/dependencies/agent/overview",
+      "destination": "/dependencies/agent/overview"
+    },
+    {
+      "source": "/basics/dependencies/agent/usage/access-dependencies-in-tool",
+      "destination": "/dependencies/agent/access-dependencies-in-tool"
+    },
+    {
+      "source": "/basics/dependencies/agent/usage/add-dependencies-run",
+      "destination": "/dependencies/agent/add-dependencies-run"
+    },
+    {
+      "source": "/basics/dependencies/agent/usage/add-dependencies-to-context",
+      "destination": "/dependencies/agent/add-dependencies-to-context"
+    },
+    {
+      "source": "/basics/dependencies/overview",
+      "destination": "/dependencies/overview"
+    },
+    {
+      "source": "/basics/dependencies/team/overview",
+      "destination": "/dependencies/team/overview"
+    },
+    {
+      "source": "/basics/dependencies/team/usage/access-dependencies-in-tool",
+      "destination": "/dependencies/team/access-dependencies-in-tool"
+    },
+    {
+      "source": "/basics/dependencies/team/usage/add-dependencies-run",
+      "destination": "/dependencies/team/add-dependencies-run"
+    },
+    {
+      "source": "/basics/dependencies/team/usage/add-dependencies-to-context",
+      "destination": "/dependencies/team/add-dependencies-to-context"
+    },
+    {
+      "source": "/basics/dependencies/team/usage/reference-dependencies",
+      "destination": "/dependencies/team/reference-dependencies"
+    },
+    {
+      "source": "/basics/evals/accuracy/overview",
+      "destination": "/evals/accuracy/overview"
+    },
+    {
+      "source": "/basics/evals/accuracy/usage/accuracy-async",
+      "destination": "/evals/accuracy/usage/accuracy-async"
+    },
+    {
+      "source": "/basics/evals/accuracy/usage/accuracy-comparison",
+      "destination": "/evals/accuracy/usage/accuracy-comparison"
+    },
+    {
+      "source": "/basics/evals/accuracy/usage/accuracy-db-logging",
+      "destination": "/evals/accuracy/usage/accuracy-db-logging"
+    },
+    {
+      "source": "/basics/evals/accuracy/usage/accuracy-with-given-answer",
+      "destination": "/evals/accuracy/usage/accuracy-with-given-answer"
+    },
+    {
+      "source": "/basics/evals/accuracy/usage/accuracy-with-teams",
+      "destination": "/evals/accuracy/usage/accuracy-with-teams"
+    },
+    {
+      "source": "/basics/evals/accuracy/usage/accuracy-with-tools",
+      "destination": "/evals/accuracy/usage/accuracy-with-tools"
+    },
+    {
+      "source": "/basics/evals/accuracy/usage/basic",
+      "destination": "/evals/accuracy/usage/basic"
+    },
+    {
+      "source": "/basics/evals/agent-as-judge/overview",
+      "destination": "/evals/agent-as-judge/overview"
+    },
+    {
+      "source": "/basics/evals/agent-as-judge/usage/agent-as-judge-async",
+      "destination": "/evals/agent-as-judge/usage/agent-as-judge-async"
+    },
+    {
+      "source": "/basics/evals/agent-as-judge/usage/agent-as-judge-basic",
+      "destination": "/evals/agent-as-judge/usage/agent-as-judge-basic"
+    },
+    {
+      "source": "/basics/evals/agent-as-judge/usage/agent-as-judge-batch",
+      "destination": "/evals/agent-as-judge/usage/agent-as-judge-batch"
+    },
+    {
+      "source": "/basics/evals/agent-as-judge/usage/agent-as-judge-binary",
+      "destination": "/evals/agent-as-judge/usage/agent-as-judge-binary"
+    },
+    {
+      "source": "/basics/evals/agent-as-judge/usage/agent-as-judge-custom-evaluator",
+      "destination": "/evals/agent-as-judge/usage/agent-as-judge-custom-evaluator"
+    },
+    {
+      "source": "/basics/evals/agent-as-judge/usage/agent-as-judge-post-hook",
+      "destination": "/evals/agent-as-judge/usage/agent-as-judge-post-hook"
+    },
+    {
+      "source": "/basics/evals/agent-as-judge/usage/agent-as-judge-team",
+      "destination": "/evals/agent-as-judge/usage/agent-as-judge-team"
+    },
+    {
+      "source": "/basics/evals/agent-as-judge/usage/agent-as-judge-team-post-hook-async",
+      "destination": "/evals/agent-as-judge/usage/agent-as-judge-team-post-hook-async"
+    },
+    {
+      "source": "/basics/evals/agent-as-judge/usage/agent-as-judge-with-guidelines",
+      "destination": "/evals/agent-as-judge/usage/agent-as-judge-with-guidelines"
+    },
+    {
+      "source": "/basics/evals/overview",
+      "destination": "/evals/overview"
+    },
+    {
+      "source": "/basics/evals/performance/overview",
+      "destination": "/evals/performance/overview"
+    },
+    {
+      "source": "/basics/evals/performance/usage/performance-agent-instantiation",
+      "destination": "/evals/performance/usage/performance-agent-instantiation"
+    },
+    {
+      "source": "/basics/evals/performance/usage/performance-async",
+      "destination": "/evals/performance/usage/performance-async"
+    },
+    {
+      "source": "/basics/evals/performance/usage/performance-db-logging",
+      "destination": "/evals/performance/usage/performance-db-logging"
+    },
+    {
+      "source": "/basics/evals/performance/usage/performance-instantiation-with-tool",
+      "destination": "/evals/performance/usage/performance-instantiation-with-tool"
+    },
+    {
+      "source": "/basics/evals/performance/usage/performance-simple-response",
+      "destination": "/evals/performance/usage/performance-simple-response"
+    },
+    {
+      "source": "/basics/evals/performance/usage/performance-team-instantiation",
+      "destination": "/evals/performance/usage/performance-team-instantiation"
+    },
+    {
+      "source": "/basics/evals/performance/usage/performance-team-with-memory",
+      "destination": "/evals/performance/usage/performance-team-with-memory"
+    },
+    {
+      "source": "/basics/evals/performance/usage/performance-with-memory",
+      "destination": "/evals/performance/usage/performance-with-memory"
+    },
+    {
+      "source": "/basics/evals/performance/usage/performance-with-storage",
+      "destination": "/evals/performance/usage/performance-with-storage"
+    },
+    {
+      "source": "/basics/evals/reliability/overview",
+      "destination": "/evals/reliability/overview"
+    },
+    {
+      "source": "/basics/evals/reliability/usage/basic",
+      "destination": "/evals/reliability/usage/basic"
+    },
+    {
+      "source": "/basics/evals/reliability/usage/reliability-async",
+      "destination": "/evals/reliability/usage/reliability-async"
+    },
+    {
+      "source": "/basics/evals/reliability/usage/reliability-db-logging",
+      "destination": "/evals/reliability/usage/reliability-db-logging"
+    },
+    {
+      "source": "/basics/evals/reliability/usage/reliability-single-tool",
+      "destination": "/evals/reliability/usage/reliability-single-tool"
+    },
+    {
+      "source": "/basics/evals/reliability/usage/reliability-team-advanced",
+      "destination": "/evals/reliability/usage/reliability-team-advanced"
+    },
+    {
+      "source": "/basics/evals/reliability/usage/reliability-with-multiple-tools",
+      "destination": "/evals/reliability/usage/reliability-with-multiple-tools"
+    },
+    {
+      "source": "/basics/evals/reliability/usage/reliability-with-teams",
+      "destination": "/evals/reliability/usage/reliability-with-teams"
+    },
+    {
+      "source": "/basics/guardrails/included/openai-moderation",
+      "destination": "/guardrails/included/openai-moderation"
+    },
+    {
+      "source": "/basics/guardrails/included/pii",
+      "destination": "/guardrails/included/pii"
+    },
+    {
+      "source": "/basics/guardrails/included/prompt-injection",
+      "destination": "/guardrails/included/prompt-injection"
+    },
+    {
+      "source": "/basics/guardrails/overview",
+      "destination": "/guardrails/overview"
+    },
+    {
+      "source": "/basics/guardrails/usage/agent/openai-moderation",
+      "destination": "/guardrails/usage/agent/openai-moderation"
+    },
+    {
+      "source": "/basics/guardrails/usage/agent/pii-detection",
+      "destination": "/guardrails/usage/agent/pii-detection"
+    },
+    {
+      "source": "/basics/guardrails/usage/agent/prompt-injection",
+      "destination": "/guardrails/usage/agent/prompt-injection"
+    },
+    {
+      "source": "/basics/guardrails/usage/team/openai-moderation",
+      "destination": "/guardrails/usage/team/openai-moderation"
+    },
+    {
+      "source": "/basics/guardrails/usage/team/pii-detection",
+      "destination": "/guardrails/usage/team/pii-detection"
+    },
+    {
+      "source": "/basics/guardrails/usage/team/prompt-injection",
+      "destination": "/guardrails/usage/team/prompt-injection"
+    },
+    {
+      "source": "/basics/hitl/dynamic-user-input",
+      "destination": "/hitl/dynamic-user-input"
+    },
+    {
+      "source": "/basics/hitl/external-execution",
+      "destination": "/hitl/external-execution"
+    },
+    {
+      "source": "/basics/hitl/overview",
+      "destination": "/hitl/overview"
+    },
+    {
+      "source": "/basics/hitl/usage/agentic-user-input",
+      "destination": "/hitl/usage/agentic-user-input"
+    },
+    {
+      "source": "/basics/hitl/usage/confirmation-required",
+      "destination": "/hitl/usage/confirmation-required"
+    },
+    {
+      "source": "/basics/hitl/usage/confirmation-required-async",
+      "destination": "/hitl/usage/confirmation-required-async"
+    },
+    {
+      "source": "/basics/hitl/usage/confirmation-required-mixed-tools",
+      "destination": "/hitl/usage/confirmation-required-mixed-tools"
+    },
+    {
+      "source": "/basics/hitl/usage/confirmation-required-multiple-tools",
+      "destination": "/hitl/usage/confirmation-required-multiple-tools"
+    },
+    {
+      "source": "/basics/hitl/usage/confirmation-required-stream",
+      "destination": "/hitl/usage/confirmation-required-stream"
+    },
+    {
+      "source": "/basics/hitl/usage/confirmation-required-stream-async",
+      "destination": "/hitl/usage/confirmation-required-stream-async"
+    },
+    {
+      "source": "/basics/hitl/usage/confirmation-required-toolkit",
+      "destination": "/hitl/usage/confirmation-required-toolkit"
+    },
+    {
+      "source": "/basics/hitl/usage/confirmation-required-with-history",
+      "destination": "/hitl/usage/confirmation-required-with-history"
+    },
+    {
+      "source": "/basics/hitl/usage/confirmation-required-with-run-id",
+      "destination": "/hitl/usage/confirmation-required-with-run-id"
+    },
+    {
+      "source": "/basics/hitl/usage/external-tool-execution",
+      "destination": "/hitl/usage/external-tool-execution"
+    },
+    {
+      "source": "/basics/hitl/usage/external-tool-execution-async",
+      "destination": "/hitl/usage/external-tool-execution-async"
+    },
+    {
+      "source": "/basics/hitl/usage/external-tool-execution-stream-async",
+      "destination": "/hitl/usage/external-tool-execution-stream-async"
+    },
+    {
+      "source": "/basics/hitl/usage/external-tool-execution-toolkit",
+      "destination": "/hitl/usage/external-tool-execution-toolkit"
+    },
+    {
+      "source": "/basics/hitl/usage/user-input-required",
+      "destination": "/hitl/usage/user-input-required"
+    },
+    {
+      "source": "/basics/hitl/usage/user-input-required-all-fields",
+      "destination": "/hitl/usage/user-input-required-all-fields"
+    },
+    {
+      "source": "/basics/hitl/usage/user-input-required-async",
+      "destination": "/hitl/usage/user-input-required-async"
+    },
+    {
+      "source": "/basics/hitl/usage/user-input-required-stream-async",
+      "destination": "/hitl/usage/user-input-required-stream-async"
+    },
+    {
+      "source": "/basics/hitl/user-confirmation",
+      "destination": "/hitl/user-confirmation"
+    },
+    {
+      "source": "/basics/hitl/user-input",
+      "destination": "/hitl/user-input"
+    },
+    {
+      "source": "/basics/hooks/overview",
+      "destination": "/hooks/overview"
+    },
+    {
+      "source": "/basics/hooks/usage/agent/input-transformation-pre-hook",
+      "destination": "/hooks/usage/agent/input-transformation-pre-hook"
+    },
+    {
+      "source": "/basics/hooks/usage/agent/input-validation-pre-hook",
+      "destination": "/hooks/usage/agent/input-validation-pre-hook"
+    },
+    {
+      "source": "/basics/hooks/usage/agent/output-transformation-post-hook",
+      "destination": "/hooks/usage/agent/output-transformation-post-hook"
+    },
+    {
+      "source": "/basics/hooks/usage/agent/output-validation-post-hook",
+      "destination": "/hooks/usage/agent/output-validation-post-hook"
+    },
+    {
+      "source": "/basics/hooks/usage/team/input-transformation-pre-hook",
+      "destination": "/hooks/usage/team/input-transformation-pre-hook"
+    },
+    {
+      "source": "/basics/hooks/usage/team/input-validation-pre-hook",
+      "destination": "/hooks/usage/team/input-validation-pre-hook"
+    },
+    {
+      "source": "/basics/hooks/usage/team/output-transformation-post-hook",
+      "destination": "/hooks/usage/team/output-transformation-post-hook"
+    },
+    {
+      "source": "/basics/hooks/usage/team/output-validation-post-hook",
+      "destination": "/hooks/usage/team/output-validation-post-hook"
+    },
+    {
+      "source": "/basics/knowledge/embedder/aws-bedrock/aws-bedrock-embedder",
+      "destination": "/knowledge/concepts/embedder/aws-bedrock/aws-bedrock-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/aws-bedrock/usage/aws-bedrock-embedder",
+      "destination": "/knowledge/concepts/embedder/aws-bedrock/aws-bedrock-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/azure-openai/azure-embedder",
+      "destination": "/knowledge/concepts/embedder/azure-openai/azure-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/azure-openai/usage/azure-embedder",
+      "destination": "/knowledge/concepts/embedder/azure-openai/azure-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/cohere/cohere-embedder",
+      "destination": "/knowledge/concepts/embedder/cohere/cohere-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/cohere/usage/cohere-embedder",
+      "destination": "/knowledge/concepts/embedder/cohere/cohere-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/fireworks/fireworks-embedder",
+      "destination": "/knowledge/concepts/embedder/fireworks/fireworks-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/fireworks/usage/fireworks-embedder",
+      "destination": "/knowledge/concepts/embedder/fireworks/fireworks-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/gemini/gemini-embedder",
+      "destination": "/knowledge/concepts/embedder/gemini/gemini-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/gemini/usage/gemini-embedder",
+      "destination": "/knowledge/concepts/embedder/gemini/gemini-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/huggingface/huggingface-embedder",
+      "destination": "/knowledge/concepts/embedder/huggingface/huggingface-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/huggingface/usage/huggingface-embedder",
+      "destination": "/knowledge/concepts/embedder/huggingface/huggingface-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/jina/jina-embedder",
+      "destination": "/knowledge/concepts/embedder/jina/jina-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/jina/usage/jina-embedder",
+      "destination": "/knowledge/concepts/embedder/jina/jina-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/langdb/langdb-embedder",
+      "destination": "/knowledge/concepts/embedder/langdb/langdb-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/langdb/usage/langdb-embedder",
+      "destination": "/knowledge/concepts/embedder/langdb/langdb-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/mistral/mistral-embedder",
+      "destination": "/knowledge/concepts/embedder/mistral/mistral-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/mistral/usage/mistral-embedder",
+      "destination": "/knowledge/concepts/embedder/mistral/mistral-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/nebius/nebius-embedder",
+      "destination": "/knowledge/concepts/embedder/nebius/nebius-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/nebius/usage/nebius-embedder",
+      "destination": "/knowledge/concepts/embedder/nebius/nebius-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/ollama/ollama-embedder",
+      "destination": "/knowledge/concepts/embedder/ollama/ollama-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/ollama/usage/ollama-embedder",
+      "destination": "/knowledge/concepts/embedder/ollama/ollama-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/openai/openai-embedder",
+      "destination": "/knowledge/concepts/embedder/openai/openai-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/openai/usage/openai-embedder",
+      "destination": "/knowledge/concepts/embedder/openai/openai-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/qdrant-fastembed/qdrant-fastembed",
+      "destination": "/knowledge/concepts/embedder/qdrant-fastembed/qdrant-fastembed"
+    },
+    {
+      "source": "/basics/knowledge/embedder/qdrant-fastembed/usage/qdrant-fastembed",
+      "destination": "/knowledge/concepts/embedder/qdrant-fastembed/qdrant-fastembed"
+    },
+    {
+      "source": "/basics/knowledge/embedder/sentencetransformers/sentence-transformer-embedder",
+      "destination": "/knowledge/concepts/embedder/sentencetransformers/sentence-transformer-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/sentencetransformers/usage/sentence-transformer-embedder",
+      "destination": "/knowledge/concepts/embedder/sentencetransformers/sentence-transformer-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/together/together-embedder",
+      "destination": "/knowledge/concepts/embedder/together/together-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/together/usage/together-embedder",
+      "destination": "/knowledge/concepts/embedder/together/together-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/vllm/usage/vllm-embedder",
+      "destination": "/knowledge/concepts/embedder/vllm/vllm-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/vllm/vllm-embedder",
+      "destination": "/knowledge/concepts/embedder/vllm/vllm-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/voyageai/usage/voyageai-embedder",
+      "destination": "/knowledge/concepts/embedder/voyageai/voyageai-embedder"
+    },
+    {
+      "source": "/basics/knowledge/embedder/voyageai/voyageai-embedder",
+      "destination": "/knowledge/concepts/embedder/voyageai/voyageai-embedder"
+    },
+    {
+      "source": "/basics/knowledge/filters/agentic-filtering",
+      "destination": "/knowledge/concepts/filters/agentic-filtering"
+    },
+    {
+      "source": "/basics/knowledge/filters/async-filtering",
+      "destination": "/knowledge/concepts/filters/async-filtering"
+    },
+    {
+      "source": "/basics/knowledge/filters/filter-expressions",
+      "destination": "/knowledge/concepts/filters/filter-expressions"
+    },
+    {
+      "source": "/basics/knowledge/filters/filtering",
+      "destination": "/knowledge/concepts/filters/filtering"
+    },
+    {
+      "source": "/basics/knowledge/filters/filtering-chroma-db",
+      "destination": "/knowledge/concepts/filters/filtering-chroma-db"
+    },
+    {
+      "source": "/basics/knowledge/filters/filtering-lance-db",
+      "destination": "/knowledge/concepts/filters/filtering-lance-db"
+    },
+    {
+      "source": "/basics/knowledge/filters/filtering-milvus-db",
+      "destination": "/knowledge/concepts/filters/filtering-milvus-db"
+    },
+    {
+      "source": "/basics/knowledge/filters/filtering-mongo-db",
+      "destination": "/knowledge/concepts/filters/filtering-mongo-db"
+    },
+    {
+      "source": "/basics/knowledge/filters/filtering-on-load",
+      "destination": "/knowledge/concepts/filters/filtering-on-load"
+    },
+    {
+      "source": "/basics/knowledge/filters/filtering-pgvector",
+      "destination": "/knowledge/concepts/filters/filtering-pgvector"
+    },
+    {
+      "source": "/basics/knowledge/filters/filtering-pinecone",
+      "destination": "/knowledge/concepts/filters/filtering-pinecone"
+    },
+    {
+      "source": "/basics/knowledge/filters/filtering-qdrant-db",
+      "destination": "/knowledge/concepts/filters/filtering-qdrant-db"
+    },
+    {
+      "source": "/basics/knowledge/filters/filtering-surreal-db",
+      "destination": "/knowledge/concepts/filters/filtering-surreal-db"
+    },
+    {
+      "source": "/basics/knowledge/filters/filtering-weaviate",
+      "destination": "/knowledge/concepts/filters/filtering-weaviate"
+    },
+    {
+      "source": "/basics/knowledge/filters/filtering-with-invalid-keys",
+      "destination": "/knowledge/concepts/filters/filtering-with-invalid-keys"
+    },
+    {
+      "source": "/basics/knowledge/filters/usage/agentic-filtering",
+      "destination": "/knowledge/concepts/filters/agentic-filtering"
+    },
+    {
+      "source": "/basics/knowledge/filters/usage/async-filtering",
+      "destination": "/knowledge/concepts/filters/async-filtering"
+    },
+    {
+      "source": "/basics/knowledge/filters/usage/filter-expressions",
+      "destination": "/knowledge/concepts/filters/filter-expressions"
+    },
+    {
+      "source": "/basics/knowledge/filters/usage/filtering",
+      "destination": "/knowledge/concepts/filters/filtering"
+    },
+    {
+      "source": "/basics/knowledge/filters/usage/filtering-on-load",
+      "destination": "/knowledge/concepts/filters/filtering-on-load"
+    },
+    {
+      "source": "/basics/knowledge/filters/usage/filtering-with-invalid-keys",
+      "destination": "/knowledge/concepts/filters/filtering-with-invalid-keys"
+    },
+    {
+      "source": "/basics/knowledge/filters/usage/vector-dbs/filtering-chroma-db",
+      "destination": "/knowledge/concepts/filters/filtering-chroma-db"
+    },
+    {
+      "source": "/basics/knowledge/filters/usage/vector-dbs/filtering-lance-db",
+      "destination": "/knowledge/concepts/filters/filtering-lance-db"
+    },
+    {
+      "source": "/basics/knowledge/filters/usage/vector-dbs/filtering-milvus-db",
+      "destination": "/knowledge/concepts/filters/filtering-milvus-db"
+    },
+    {
+      "source": "/basics/knowledge/filters/usage/vector-dbs/filtering-mongo-db",
+      "destination": "/knowledge/concepts/filters/filtering-mongo-db"
+    },
+    {
+      "source": "/basics/knowledge/filters/usage/vector-dbs/filtering-pgvector",
+      "destination": "/knowledge/concepts/filters/filtering-pgvector"
+    },
+    {
+      "source": "/basics/knowledge/filters/usage/vector-dbs/filtering-pinecone",
+      "destination": "/knowledge/concepts/filters/filtering-pinecone"
+    },
+    {
+      "source": "/basics/knowledge/filters/usage/vector-dbs/filtering-qdrant-db",
+      "destination": "/knowledge/concepts/filters/filtering-qdrant-db"
+    },
+    {
+      "source": "/basics/knowledge/filters/usage/vector-dbs/filtering-surreal-db",
+      "destination": "/knowledge/concepts/filters/filtering-surreal-db"
+    },
+    {
+      "source": "/basics/knowledge/filters/usage/vector-dbs/filtering-weaviate",
+      "destination": "/knowledge/concepts/filters/filtering-weaviate"
+    },
+    {
+      "source": "/basics/knowledge/readers/arxiv-reader",
+      "destination": "/knowledge/concepts/readers/arxiv-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/arxiv-reader-async",
+      "destination": "/knowledge/concepts/readers/arxiv-reader-async"
+    },
+    {
+      "source": "/basics/knowledge/readers/csv-reader",
+      "destination": "/knowledge/concepts/readers/csv-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/csv-reader-async",
+      "destination": "/knowledge/concepts/readers/csv-reader-async"
+    },
+    {
+      "source": "/basics/knowledge/readers/csv-url-reader",
+      "destination": "/knowledge/concepts/readers/csv-url-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/field-labeled-csv-reader",
+      "destination": "/knowledge/concepts/readers/field-labeled-csv-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/firecrawl-reader",
+      "destination": "/knowledge/concepts/readers/firecrawl-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/firecrawl-reader-async",
+      "destination": "/knowledge/concepts/readers/firecrawl-reader-async"
+    },
+    {
+      "source": "/basics/knowledge/readers/json-reader",
+      "destination": "/knowledge/concepts/readers/json-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/json-reader-async",
+      "destination": "/knowledge/concepts/readers/json-reader-async"
+    },
+    {
+      "source": "/basics/knowledge/readers/markdown-reader",
+      "destination": "/knowledge/concepts/readers/markdown-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/markdown-reader-async",
+      "destination": "/knowledge/concepts/readers/markdown-reader-async"
+    },
+    {
+      "source": "/basics/knowledge/readers/pdf-password-reader",
+      "destination": "/knowledge/concepts/readers/pdf-password-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/pdf-reader",
+      "destination": "/knowledge/concepts/readers/pdf-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/pdf-reader-async",
+      "destination": "/knowledge/concepts/readers/pdf-reader-async"
+    },
+    {
+      "source": "/basics/knowledge/readers/pdf-url-password-reader",
+      "destination": "/knowledge/concepts/readers/pdf-url-password-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/pptx-reader",
+      "destination": "/knowledge/concepts/readers/pptx-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/pptx-reader-async",
+      "destination": "/knowledge/concepts/readers/pptx-reader-async"
+    },
+    {
+      "source": "/basics/knowledge/readers/usage/arxiv-reader",
+      "destination": "/knowledge/concepts/readers/arxiv-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/usage/arxiv-reader-async",
+      "destination": "/knowledge/concepts/readers/arxiv-reader-async"
+    },
+    {
+      "source": "/basics/knowledge/readers/usage/csv-reader",
+      "destination": "/knowledge/concepts/readers/csv-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/usage/csv-reader-async",
+      "destination": "/knowledge/concepts/readers/csv-reader-async"
+    },
+    {
+      "source": "/basics/knowledge/readers/usage/csv-url-reader",
+      "destination": "/knowledge/concepts/readers/csv-url-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/usage/field-labeled-csv-reader",
+      "destination": "/knowledge/concepts/readers/field-labeled-csv-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/usage/firecrawl-reader",
+      "destination": "/knowledge/concepts/readers/firecrawl-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/usage/firecrawl-reader-async",
+      "destination": "/knowledge/concepts/readers/firecrawl-reader-async"
+    },
+    {
+      "source": "/basics/knowledge/readers/usage/json-reader",
+      "destination": "/knowledge/concepts/readers/json-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/usage/json-reader-async",
+      "destination": "/knowledge/concepts/readers/json-reader-async"
+    },
+    {
+      "source": "/basics/knowledge/readers/usage/markdown-reader",
+      "destination": "/knowledge/concepts/readers/markdown-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/usage/markdown-reader-async",
+      "destination": "/knowledge/concepts/readers/markdown-reader-async"
+    },
+    {
+      "source": "/basics/knowledge/readers/usage/pdf-password-reader",
+      "destination": "/knowledge/concepts/readers/pdf-password-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/usage/pdf-reader",
+      "destination": "/knowledge/concepts/readers/pdf-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/usage/pdf-reader-async",
+      "destination": "/knowledge/concepts/readers/pdf-reader-async"
+    },
+    {
+      "source": "/basics/knowledge/readers/usage/pdf-url-password-reader",
+      "destination": "/knowledge/concepts/readers/pdf-url-password-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/usage/pptx-reader",
+      "destination": "/knowledge/concepts/readers/pptx-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/usage/pptx-reader-async",
+      "destination": "/knowledge/concepts/readers/pptx-reader-async"
+    },
+    {
+      "source": "/basics/knowledge/readers/usage/web-search-reader",
+      "destination": "/knowledge/concepts/readers/web-search-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/usage/web-search-reader-async",
+      "destination": "/knowledge/concepts/readers/web-search-reader-async"
+    },
+    {
+      "source": "/basics/knowledge/readers/usage/website-reader",
+      "destination": "/knowledge/concepts/readers/website-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/usage/website-reader-async",
+      "destination": "/knowledge/concepts/readers/website-reader-async"
+    },
+    {
+      "source": "/basics/knowledge/readers/usage/wikipedia-reader",
+      "destination": "/knowledge/concepts/readers/wikipedia-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/usage/wikipedia-reader-async",
+      "destination": "/knowledge/concepts/readers/wikipedia-reader-async"
+    },
+    {
+      "source": "/basics/knowledge/readers/usage/youtube-reader",
+      "destination": "/knowledge/concepts/readers/youtube-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/usage/youtube-reader-async",
+      "destination": "/knowledge/concepts/readers/youtube-reader-async"
+    },
+    {
+      "source": "/basics/knowledge/readers/web-search-reader",
+      "destination": "/knowledge/concepts/readers/web-search-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/web-search-reader-async",
+      "destination": "/knowledge/concepts/readers/web-search-reader-async"
+    },
+    {
+      "source": "/basics/knowledge/readers/website-reader",
+      "destination": "/knowledge/concepts/readers/website-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/website-reader-async",
+      "destination": "/knowledge/concepts/readers/website-reader-async"
+    },
+    {
+      "source": "/basics/knowledge/readers/wikipedia-reader",
+      "destination": "/knowledge/concepts/readers/wikipedia-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/wikipedia-reader-async",
+      "destination": "/knowledge/concepts/readers/wikipedia-reader-async"
+    },
+    {
+      "source": "/basics/knowledge/readers/youtube-reader",
+      "destination": "/knowledge/concepts/readers/youtube-reader"
+    },
+    {
+      "source": "/basics/knowledge/readers/youtube-reader-async",
+      "destination": "/knowledge/concepts/readers/youtube-reader-async"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/agentic-rag",
+      "destination": "/knowledge/concepts/search-and-retrieval/agentic-rag"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/agentic-rag-infinity-reranker",
+      "destination": "/knowledge/concepts/search-and-retrieval/agentic-rag-infinity-reranker"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/agentic-rag-lancedb",
+      "destination": "/knowledge/concepts/search-and-retrieval/agentic-rag-lancedb"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/agentic-rag-pgvector",
+      "destination": "/knowledge/concepts/search-and-retrieval/agentic-rag-pgvector"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/agentic-rag-with-lightrag",
+      "destination": "/knowledge/concepts/search-and-retrieval/agentic-rag-with-lightrag"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/agentic-rag-with-reasoning",
+      "destination": "/knowledge/concepts/search-and-retrieval/agentic-rag-with-reasoning"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/agentic-rag-with-reranking",
+      "destination": "/knowledge/concepts/search-and-retrieval/agentic-rag-with-reranking"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/async-custom-retriever",
+      "destination": "/knowledge/concepts/search-and-retrieval/async-custom-retriever"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/custom-retriever",
+      "destination": "/knowledge/concepts/search-and-retrieval/custom-retriever"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/hybrid-search",
+      "destination": "/knowledge/concepts/search-and-retrieval/hybrid-search"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/keyword-search",
+      "destination": "/knowledge/concepts/search-and-retrieval/keyword-search"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/rag-sentence-transformer",
+      "destination": "/knowledge/concepts/search-and-retrieval/rag-sentence-transformer"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/rag-with-lance-db-and-sqlite",
+      "destination": "/knowledge/concepts/search-and-retrieval/rag-with-lance-db-and-sqlite"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/traditional-rag-lancedb",
+      "destination": "/knowledge/concepts/search-and-retrieval/traditional-rag-lancedb"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/traditional-rag-pgvector",
+      "destination": "/knowledge/concepts/search-and-retrieval/traditional-rag-pgvector"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/usage/agentic-rag",
+      "destination": "/knowledge/concepts/search-and-retrieval/agentic-rag"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/usage/agentic-rag-infinity-reranker",
+      "destination": "/knowledge/concepts/search-and-retrieval/agentic-rag-infinity-reranker"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/usage/agentic-rag-lancedb",
+      "destination": "/knowledge/concepts/search-and-retrieval/agentic-rag-lancedb"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/usage/agentic-rag-pgvector",
+      "destination": "/knowledge/concepts/search-and-retrieval/agentic-rag-pgvector"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/usage/agentic-rag-with-lightrag",
+      "destination": "/knowledge/concepts/search-and-retrieval/agentic-rag-with-lightrag"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/usage/agentic-rag-with-reasoning",
+      "destination": "/knowledge/concepts/search-and-retrieval/agentic-rag-with-reasoning"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/usage/agentic-rag-with-reranking",
+      "destination": "/knowledge/concepts/search-and-retrieval/agentic-rag-with-reranking"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/usage/async-custom-retriever",
+      "destination": "/knowledge/concepts/search-and-retrieval/async-custom-retriever"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/usage/custom-retriever",
+      "destination": "/knowledge/concepts/search-and-retrieval/custom-retriever"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/usage/hybrid-search",
+      "destination": "/knowledge/concepts/search-and-retrieval/hybrid-search"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/usage/keyword-search",
+      "destination": "/knowledge/concepts/search-and-retrieval/keyword-search"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/usage/rag-sentence-transformer",
+      "destination": "/knowledge/concepts/search-and-retrieval/rag-sentence-transformer"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/usage/rag-with-lance-db-and-sqlite",
+      "destination": "/knowledge/concepts/search-and-retrieval/rag-with-lance-db-and-sqlite"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/usage/traditional-rag-lancedb",
+      "destination": "/knowledge/concepts/search-and-retrieval/traditional-rag-lancedb"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/usage/traditional-rag-pgvector",
+      "destination": "/knowledge/concepts/search-and-retrieval/traditional-rag-pgvector"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/usage/vector-search",
+      "destination": "/knowledge/concepts/search-and-retrieval/vector-search"
+    },
+    {
+      "source": "/basics/knowledge/search-and-retrieval/vector-search",
+      "destination": "/knowledge/concepts/search-and-retrieval/vector-search"
+    },
+    {
+      "source": "/basics/learning/custom-schemas",
+      "destination": "/learning/custom-schemas"
+    },
+    {
+      "source": "/basics/learning/learning-modes",
+      "destination": "/learning/learning-modes"
+    },
+    {
+      "source": "/basics/learning/overview",
+      "destination": "/learning/overview"
+    },
+    {
+      "source": "/basics/learning/stores/entity-memory",
+      "destination": "/learning/stores/entity-memory"
+    },
+    {
+      "source": "/basics/learning/stores/learned-knowledge",
+      "destination": "/learning/stores/learned-knowledge"
+    },
+    {
+      "source": "/basics/learning/stores/session-context",
+      "destination": "/learning/stores/session-context"
+    },
+    {
+      "source": "/basics/learning/stores/user-memory",
+      "destination": "/learning/stores/user-memory"
+    },
+    {
+      "source": "/basics/learning/stores/user-profile",
+      "destination": "/learning/stores/user-profile"
+    },
+    {
+      "source": "/basics/memory/agent/overview",
+      "destination": "/memory/agent/overview"
+    },
+    {
+      "source": "/basics/memory/agent/usage/agent-with-memory",
+      "destination": "/memory/agent/agent-with-memory"
+    },
+    {
+      "source": "/basics/memory/agent/usage/agentic-memory",
+      "destination": "/memory/agent/agentic-memory"
+    },
+    {
+      "source": "/basics/memory/agent/usage/agents-share-memory",
+      "destination": "/memory/agent/agents-share-memory"
+    },
+    {
+      "source": "/basics/memory/agent/usage/custom-memory-manager",
+      "destination": "/memory/agent/custom-memory-manager"
+    },
+    {
+      "source": "/basics/memory/agent/usage/multi-user-multi-session-chat",
+      "destination": "/memory/agent/multi-user-multi-session-chat"
+    },
+    {
+      "source": "/basics/memory/agent/usage/multi-user-multi-session-chat-concurrent",
+      "destination": "/memory/agent/multi-user-multi-session-chat-concurrent"
+    },
+    {
+      "source": "/basics/memory/agent/usage/share-memory-and-history-between-agents",
+      "destination": "/memory/agent/share-memory-and-history-between-agents"
+    },
+    {
+      "source": "/basics/memory/best-practices",
+      "destination": "/memory/best-practices"
+    },
+    {
+      "source": "/basics/memory/overview",
+      "destination": "/memory/overview"
+    },
+    {
+      "source": "/basics/memory/team/overview",
+      "destination": "/memory/team/overview"
+    },
+    {
+      "source": "/basics/memory/team/usage/team-with-agentic-memory",
+      "destination": "/memory/team/team-with-agentic-memory"
+    },
+    {
+      "source": "/basics/memory/team/usage/team-with-memory-manager",
+      "destination": "/memory/team/team-with-memory-manager"
+    },
+    {
+      "source": "/basics/memory/working-with-memories/overview",
+      "destination": "/memory/working-with-memories/overview"
+    },
+    {
+      "source": "/basics/memory/working-with-memories/usage/custom-memory-instructions",
+      "destination": "/memory/working-with-memories/custom-memory-instructions"
+    },
+    {
+      "source": "/basics/memory/working-with-memories/usage/memory-creation",
+      "destination": "/memory/working-with-memories/memory-creation"
+    },
+    {
+      "source": "/basics/memory/working-with-memories/usage/memory-optimization",
+      "destination": "/memory/working-with-memories/memory-optimization"
+    },
+    {
+      "source": "/basics/memory/working-with-memories/usage/memory-search",
+      "destination": "/memory/working-with-memories/memory-search"
+    },
+    {
+      "source": "/basics/memory/working-with-memories/usage/mongodb-memory",
+      "destination": "/memory/working-with-memories/mongodb-memory"
+    },
+    {
+      "source": "/basics/memory/working-with-memories/usage/postgres-memory",
+      "destination": "/memory/working-with-memories/postgres-memory"
+    },
+    {
+      "source": "/basics/memory/working-with-memories/usage/redis-memory",
+      "destination": "/memory/working-with-memories/redis-memory"
+    },
+    {
+      "source": "/basics/memory/working-with-memories/usage/sqlite-memory",
+      "destination": "/memory/working-with-memories/sqlite-memory"
+    },
+    {
+      "source": "/basics/memory/working-with-memories/usage/standalone-memory",
+      "destination": "/memory/working-with-memories/standalone-memory"
+    },
+    {
+      "source": "/basics/multimodal/agent/overview",
+      "destination": "/multimodal/agent/overview"
+    },
+    {
+      "source": "/basics/multimodal/agent/usage/agent-same-run-image-analysis",
+      "destination": "/multimodal/agent/usage/agent-same-run-image-analysis"
+    },
+    {
+      "source": "/basics/multimodal/agent/usage/agent-using-multimodal-tool-response-in-runs",
+      "destination": "/multimodal/agent/usage/agent-using-multimodal-tool-response-in-runs"
+    },
+    {
+      "source": "/basics/multimodal/agent/usage/audio-input-output",
+      "destination": "/multimodal/agent/usage/audio-input-output"
+    },
+    {
+      "source": "/basics/multimodal/agent/usage/audio-multi-turn",
+      "destination": "/multimodal/agent/usage/audio-multi-turn"
+    },
+    {
+      "source": "/basics/multimodal/agent/usage/audio-sentiment-analysis",
+      "destination": "/multimodal/agent/usage/audio-sentiment-analysis"
+    },
+    {
+      "source": "/basics/multimodal/agent/usage/audio-streaming",
+      "destination": "/multimodal/agent/usage/audio-streaming"
+    },
+    {
+      "source": "/basics/multimodal/agent/usage/audio-to-text",
+      "destination": "/multimodal/agent/usage/audio-to-text"
+    },
+    {
+      "source": "/basics/multimodal/agent/usage/file-input-for-tool",
+      "destination": "/multimodal/agent/usage/file-input-for-tool"
+    },
+    {
+      "source": "/basics/multimodal/agent/usage/generate-image-with-intermediate-steps",
+      "destination": "/multimodal/agent/usage/generate-image-with-intermediate-steps"
+    },
+    {
+      "source": "/basics/multimodal/agent/usage/generate-video-using-models-lab",
+      "destination": "/multimodal/agent/usage/generate-video-using-models-lab"
+    },
+    {
+      "source": "/basics/multimodal/agent/usage/generate-video-using-replicate",
+      "destination": "/multimodal/agent/usage/generate-video-using-replicate"
+    },
+    {
+      "source": "/basics/multimodal/agent/usage/image-input-for-tool",
+      "destination": "/multimodal/agent/usage/image-input-for-tool"
+    },
+    {
+      "source": "/basics/multimodal/agent/usage/image-input-high-fidelity",
+      "destination": "/multimodal/agent/usage/image-input-high-fidelity"
+    },
+    {
+      "source": "/basics/multimodal/agent/usage/image-to-audio",
+      "destination": "/multimodal/agent/usage/image-to-audio"
+    },
+    {
+      "source": "/basics/multimodal/agent/usage/image-to-image-agent",
+      "destination": "/multimodal/agent/usage/image-to-image-agent"
+    },
+    {
+      "source": "/basics/multimodal/agent/usage/image-to-structured-output",
+      "destination": "/multimodal/agent/usage/image-to-structured-output"
+    },
+    {
+      "source": "/basics/multimodal/agent/usage/image-to-text",
+      "destination": "/multimodal/agent/usage/image-to-text"
+    },
+    {
+      "source": "/basics/multimodal/agent/usage/video-to-shorts",
+      "destination": "/multimodal/agent/usage/video-to-shorts"
+    },
+    {
+      "source": "/basics/multimodal/audio/audio_generation",
+      "destination": "/multimodal/agent/usage/audio_generation"
+    },
+    {
+      "source": "/basics/multimodal/audio/audio_input",
+      "destination": "/multimodal/agent/usage/audio_input"
+    },
+    {
+      "source": "/basics/multimodal/audio/audio_output",
+      "destination": "/multimodal/agent/usage/audio_output"
+    },
+    {
+      "source": "/basics/multimodal/audio/usage/blog-to-podcast",
+      "destination": "/multimodal/agent/usage/blog-to-podcast"
+    },
+    {
+      "source": "/basics/multimodal/audio/usage/generate-music-agent",
+      "destination": "/multimodal/agent/usage/generate-music-agent"
+    },
+    {
+      "source": "/basics/multimodal/files/file_generation",
+      "destination": "/multimodal/agent/usage/file_generation"
+    },
+    {
+      "source": "/basics/multimodal/files/file_input",
+      "destination": "/multimodal/agent/usage/file_input"
+    },
+    {
+      "source": "/basics/multimodal/images/image-generation",
+      "destination": "/multimodal/agent/usage/image-generation"
+    },
+    {
+      "source": "/basics/multimodal/images/image-input",
+      "destination": "/multimodal/agent/usage/image-input"
+    },
+    {
+      "source": "/basics/multimodal/images/image-output",
+      "destination": "/multimodal/agent/usage/image-output"
+    },
+    {
+      "source": "/basics/multimodal/images/usage/generate-image",
+      "destination": "/multimodal/agent/usage/generate-image"
+    },
+    {
+      "source": "/basics/multimodal/overview",
+      "destination": "/multimodal/overview"
+    },
+    {
+      "source": "/basics/multimodal/team/overview",
+      "destination": "/multimodal/team/overview"
+    },
+    {
+      "source": "/basics/multimodal/team/usage/audio-sentiment-analysis",
+      "destination": "/multimodal/team/usage/audio-sentiment-analysis"
+    },
+    {
+      "source": "/basics/multimodal/team/usage/audio-to-text",
+      "destination": "/multimodal/team/usage/audio-to-text"
+    },
+    {
+      "source": "/basics/multimodal/team/usage/generate-image-with-team",
+      "destination": "/multimodal/team/usage/generate-image-with-team"
+    },
+    {
+      "source": "/basics/multimodal/team/usage/image-to-image-transformation",
+      "destination": "/multimodal/team/usage/image-to-image-transformation"
+    },
+    {
+      "source": "/basics/multimodal/team/usage/image-to-structured-output",
+      "destination": "/multimodal/team/usage/image-to-structured-output"
+    },
+    {
+      "source": "/basics/multimodal/team/usage/image-to-text",
+      "destination": "/multimodal/team/usage/image-to-text"
+    },
+    {
+      "source": "/basics/multimodal/team/usage/video-caption-generation",
+      "destination": "/multimodal/team/usage/video-caption-generation"
+    },
+    {
+      "source": "/basics/multimodal/video/usage/video-caption",
+      "destination": "/multimodal/agent/usage/video-caption"
+    },
+    {
+      "source": "/basics/multimodal/video/video_generation",
+      "destination": "/multimodal/agent/usage/video_generation"
+    },
+    {
+      "source": "/basics/multimodal/video/video_input",
+      "destination": "/multimodal/agent/usage/video_input"
+    },
+    {
+      "source": "/basics/reasoning/overview",
+      "destination": "/reasoning/overview"
+    },
+    {
+      "source": "/basics/reasoning/reasoning-agents",
+      "destination": "/reasoning/reasoning-agents"
+    },
+    {
+      "source": "/basics/reasoning/reasoning-models",
+      "destination": "/reasoning/reasoning-models"
+    },
+    {
+      "source": "/basics/reasoning/reasoning-tools",
+      "destination": "/reasoning/reasoning-tools"
+    },
+    {
+      "source": "/basics/reasoning/usage/agents/basic-cot",
+      "destination": "/reasoning/usage/agents/basic-cot"
+    },
+    {
+      "source": "/basics/reasoning/usage/agents/capture-reasoning-content-cot",
+      "destination": "/reasoning/usage/agents/capture-reasoning-content-cot"
+    },
+    {
+      "source": "/basics/reasoning/usage/agents/non-reasoning-model-cot",
+      "destination": "/reasoning/usage/agents/non-reasoning-model-cot"
+    },
+    {
+      "source": "/basics/reasoning/usage/agents/team-cot",
+      "destination": "/reasoning/usage/agents/team-cot"
+    },
+    {
+      "source": "/basics/reasoning/usage/models/azure-ai-foundry/azure-ai-foundry",
+      "destination": "/reasoning/usage/models/azure-ai-foundry/azure-ai-foundry"
+    },
+    {
+      "source": "/basics/reasoning/usage/models/azure-openai/o1",
+      "destination": "/reasoning/usage/models/azure-openai/o1"
+    },
+    {
+      "source": "/basics/reasoning/usage/models/azure-openai/o3",
+      "destination": "/reasoning/usage/models/azure-openai/o3"
+    },
+    {
+      "source": "/basics/reasoning/usage/models/azure-openai/reasoning-model-gpt4-1",
+      "destination": "/reasoning/usage/models/azure-openai/reasoning-model-gpt4-1"
+    },
+    {
+      "source": "/basics/reasoning/usage/models/deepseek/deepseek-reasoner",
+      "destination": "/reasoning/usage/models/deepseek/deepseek-reasoner"
+    },
+    {
+      "source": "/basics/reasoning/usage/models/groq/groq",
+      "destination": "/reasoning/usage/models/groq/groq"
+    },
+    {
+      "source": "/basics/reasoning/usage/models/groq/groq-plus-claude",
+      "destination": "/reasoning/usage/models/groq/groq-plus-claude"
+    },
+    {
+      "source": "/basics/reasoning/usage/models/ollama/ollama",
+      "destination": "/reasoning/usage/models/ollama/ollama"
+    },
+    {
+      "source": "/basics/reasoning/usage/models/openai/gpt5-mini",
+      "destination": "/reasoning/usage/models/openai/gpt5-mini"
+    },
+    {
+      "source": "/basics/reasoning/usage/models/openai/gpt5-mini-tools",
+      "destination": "/reasoning/usage/models/openai/gpt5-mini-tools"
+    },
+    {
+      "source": "/basics/reasoning/usage/models/openai/o1-pro",
+      "destination": "/reasoning/usage/models/openai/o1-pro"
+    },
+    {
+      "source": "/basics/reasoning/usage/models/openai/o4-mini",
+      "destination": "/reasoning/usage/models/openai/o4-mini"
+    },
+    {
+      "source": "/basics/reasoning/usage/models/openai/reasoning-effort",
+      "destination": "/reasoning/usage/models/openai/reasoning-effort"
+    },
+    {
+      "source": "/basics/reasoning/usage/models/openai/reasoning-model-gpt4-1",
+      "destination": "/reasoning/usage/models/openai/reasoning-model-gpt4-1"
+    },
+    {
+      "source": "/basics/reasoning/usage/models/openai/reasoning-summary",
+      "destination": "/reasoning/usage/models/openai/reasoning-summary"
+    },
+    {
+      "source": "/basics/reasoning/usage/models/xai/reasoning-effort",
+      "destination": "/reasoning/usage/models/xai/reasoning-effort"
+    },
+    {
+      "source": "/basics/reasoning/usage/tools/azure-openai-reasoning-tools",
+      "destination": "/reasoning/usage/tools/azure-openai-reasoning-tools"
+    },
+    {
+      "source": "/basics/reasoning/usage/tools/capture-reasoning-content-knowledge-tools",
+      "destination": "/reasoning/usage/tools/capture-reasoning-content-knowledge-tools"
+    },
+    {
+      "source": "/basics/reasoning/usage/tools/capture-reasoning-content-reasoning-tools",
+      "destination": "/reasoning/usage/tools/capture-reasoning-content-reasoning-tools"
+    },
+    {
+      "source": "/basics/reasoning/usage/tools/cerebras-llama-reasoning-tools",
+      "destination": "/reasoning/usage/tools/cerebras-llama-reasoning-tools"
+    },
+    {
+      "source": "/basics/reasoning/usage/tools/claude-reasoning-tools",
+      "destination": "/reasoning/usage/tools/claude-reasoning-tools"
+    },
+    {
+      "source": "/basics/reasoning/usage/tools/gemini-reasoning-tools",
+      "destination": "/reasoning/usage/tools/gemini-reasoning-tools"
+    },
+    {
+      "source": "/basics/reasoning/usage/tools/groq-reasoning-tools",
+      "destination": "/reasoning/usage/tools/groq-reasoning-tools"
+    },
+    {
+      "source": "/basics/reasoning/usage/tools/knowledge-tool-team",
+      "destination": "/reasoning/usage/tools/knowledge-tool-team"
+    },
+    {
+      "source": "/basics/reasoning/usage/tools/knowledge-tools",
+      "destination": "/reasoning/usage/tools/knowledge-tools"
+    },
+    {
+      "source": "/basics/reasoning/usage/tools/ollama-reasoning-tools",
+      "destination": "/reasoning/usage/tools/ollama-reasoning-tools"
+    },
+    {
+      "source": "/basics/reasoning/usage/tools/openai-reasoning-tools",
+      "destination": "/reasoning/usage/tools/openai-reasoning-tools"
+    },
+    {
+      "source": "/basics/reasoning/usage/tools/reasoning-tool-team",
+      "destination": "/reasoning/usage/tools/reasoning-tool-team"
+    },
+    {
+      "source": "/basics/reasoning/usage/tools/reasoning-tools",
+      "destination": "/reasoning/usage/tools/reasoning-tools"
+    },
+    {
+      "source": "/basics/reasoning/usage/tools/vercel-reasoning-tools",
+      "destination": "/reasoning/usage/tools/vercel-reasoning-tools"
+    },
+    {
+      "source": "/basics/skills/creating-skills",
+      "destination": "/skills/creating-skills"
+    },
+    {
+      "source": "/basics/skills/loading-skills",
+      "destination": "/skills/loading-skills"
+    },
+    {
+      "source": "/basics/skills/overview",
+      "destination": "/skills/overview"
+    },
+    {
+      "source": "/basics/state/agent/overview",
+      "destination": "/state/agent/overview"
+    },
+    {
+      "source": "/basics/state/agent/usage/agentic-session-state",
+      "destination": "/state/agent/agentic-session-state"
+    },
+    {
+      "source": "/basics/state/agent/usage/change-state-on-run",
+      "destination": "/state/agent/change-state-on-run"
+    },
+    {
+      "source": "/basics/state/agent/usage/dynamic-session-state",
+      "destination": "/state/agent/dynamic-session-state"
+    },
+    {
+      "source": "/basics/state/agent/usage/last-n-session-messages",
+      "destination": "/state/agent/last-n-session-messages"
+    },
+    {
+      "source": "/basics/state/agent/usage/session-state-advanced",
+      "destination": "/state/agent/session-state-advanced"
+    },
+    {
+      "source": "/basics/state/agent/usage/session-state-basic",
+      "destination": "/state/agent/session-state-basic"
+    },
+    {
+      "source": "/basics/state/agent/usage/session-state-in-context",
+      "destination": "/state/agent/session-state-in-context"
+    },
+    {
+      "source": "/basics/state/agent/usage/session-state-in-instructions",
+      "destination": "/state/agent/session-state-in-instructions"
+    },
+    {
+      "source": "/basics/state/agent/usage/session-state-multiple-users",
+      "destination": "/state/agent/session-state-multiple-users"
+    },
+    {
+      "source": "/basics/state/overview",
+      "destination": "/state/overview"
+    },
+    {
+      "source": "/basics/state/team/overview",
+      "destination": "/state/team/overview"
+    },
+    {
+      "source": "/basics/state/team/usage/agentic-session-state",
+      "destination": "/state/team/agentic-session-state"
+    },
+    {
+      "source": "/basics/state/team/usage/change-state-on-run",
+      "destination": "/state/team/change-state-on-run"
+    },
+    {
+      "source": "/basics/state/team/usage/session-state-in-instructions",
+      "destination": "/state/team/session-state-in-instructions"
+    },
+    {
+      "source": "/basics/state/team/usage/share-member-interactions",
+      "destination": "/state/team/share-member-interactions"
+    },
+    {
+      "source": "/basics/state/workflows/overview",
+      "destination": "/state/workflows/overview"
+    },
+    {
+      "source": "/basics/state/workflows/usage/access-session-state-in-condition-evaluator-function",
+      "destination": "/state/workflows/access-session-state-in-condition-evaluator-function"
+    },
+    {
+      "source": "/basics/state/workflows/usage/access-session-state-in-custom-python-function-step",
+      "destination": "/state/workflows/access-session-state-in-custom-python-function-step"
+    },
+    {
+      "source": "/basics/state/workflows/usage/access-session-state-in-router-selector-function",
+      "destination": "/state/workflows/access-session-state-in-router-selector-function"
+    },
+    {
+      "source": "/basics/teams/usage/basic-flows/basic-streaming",
+      "destination": "/teams/usage/streaming"
+    },
+    {
+      "source": "/basics/teams/usage/basic-flows/basic-team",
+      "destination": "/teams/usage/basic-team"
+    },
+    {
+      "source": "/basics/teams/usage/basic-flows/respond-directly",
+      "destination": "/teams/usage/respond-directly"
+    },
+    {
+      "source": "/basics/telemetry",
+      "destination": "/telemetry"
+    },
+    {
+      "source": "/basics/tracing/basic-setup",
+      "destination": "/tracing/basic-setup"
+    },
+    {
+      "source": "/basics/tracing/db-functions",
+      "destination": "/tracing/db-functions"
+    },
+    {
+      "source": "/basics/tracing/overview",
+      "destination": "/tracing/overview"
+    },
+    {
+      "source": "/basics/tracing/usage/basic-agent-tracing",
+      "destination": "/tracing/usage/basic-agent-tracing"
+    },
+    {
+      "source": "/basics/tracing/usage/basic-team-tracing",
+      "destination": "/tracing/usage/basic-team-tracing"
+    },
+    {
+      "source": "/basics/tracing/usage/basic-workflow-tracing",
+      "destination": "/tracing/usage/basic-workflow-tracing"
+    },
+    {
+      "source": "/basics/vectordb/overview",
+      "destination": "/knowledge/concepts/vector-db"
+    },
+    {
+      "source": "/context/knowledge/embedder/aws-bedrock/aws-bedrock-embedder",
+      "destination": "/knowledge/concepts/embedder/aws-bedrock/aws-bedrock-embedder"
+    },
+    {
+      "source": "/context/knowledge/embedder/azure-openai/azure-embedder",
+      "destination": "/knowledge/concepts/embedder/azure-openai/azure-embedder"
+    },
+    {
+      "source": "/context/knowledge/embedder/cohere/cohere-embedder",
+      "destination": "/knowledge/concepts/embedder/cohere/cohere-embedder"
+    },
+    {
+      "source": "/context/knowledge/embedder/fireworks/fireworks-embedder",
+      "destination": "/knowledge/concepts/embedder/fireworks/fireworks-embedder"
+    },
+    {
+      "source": "/context/knowledge/embedder/gemini/gemini-embedder",
+      "destination": "/knowledge/concepts/embedder/gemini/gemini-embedder"
+    },
+    {
+      "source": "/context/knowledge/embedder/huggingface/huggingface-embedder",
+      "destination": "/knowledge/concepts/embedder/huggingface/huggingface-embedder"
+    },
+    {
+      "source": "/context/knowledge/embedder/jina/jina-embedder",
+      "destination": "/knowledge/concepts/embedder/jina/jina-embedder"
+    },
+    {
+      "source": "/context/knowledge/embedder/langdb/langdb-embedder",
+      "destination": "/knowledge/concepts/embedder/langdb/langdb-embedder"
+    },
+    {
+      "source": "/context/knowledge/embedder/mistral/mistral-embedder",
+      "destination": "/knowledge/concepts/embedder/mistral/mistral-embedder"
+    },
+    {
+      "source": "/context/knowledge/embedder/nebius/nebius-embedder",
+      "destination": "/knowledge/concepts/embedder/nebius/nebius-embedder"
+    },
+    {
+      "source": "/context/knowledge/embedder/ollama/ollama-embedder",
+      "destination": "/knowledge/concepts/embedder/ollama/ollama-embedder"
+    },
+    {
+      "source": "/context/knowledge/embedder/openai/openai-embedder",
+      "destination": "/knowledge/concepts/embedder/openai/openai-embedder"
+    },
+    {
+      "source": "/context/knowledge/embedder/qdrant-fastembed/qdrant-fastembed",
+      "destination": "/knowledge/concepts/embedder/qdrant-fastembed/qdrant-fastembed"
+    },
+    {
+      "source": "/context/knowledge/embedder/sentencetransformers/sentence-transformer-embedder",
+      "destination": "/knowledge/concepts/embedder/sentencetransformers/sentence-transformer-embedder"
+    },
+    {
+      "source": "/context/knowledge/embedder/together/together-embedder",
+      "destination": "/knowledge/concepts/embedder/together/together-embedder"
+    },
+    {
+      "source": "/context/knowledge/embedder/vllm/vllm-embedder",
+      "destination": "/knowledge/concepts/embedder/vllm/vllm-embedder"
+    },
+    {
+      "source": "/context/knowledge/embedder/voyageai/voyageai-embedder",
+      "destination": "/knowledge/concepts/embedder/voyageai/voyageai-embedder"
+    },
+    {
+      "source": "/context/knowledge/filters/agentic-filtering",
+      "destination": "/knowledge/concepts/filters/agentic-filtering"
+    },
+    {
+      "source": "/context/knowledge/filters/async-filtering",
+      "destination": "/knowledge/concepts/filters/async-filtering"
+    },
+    {
+      "source": "/context/knowledge/filters/filter-expressions",
+      "destination": "/knowledge/concepts/filters/filter-expressions"
+    },
+    {
+      "source": "/context/knowledge/filters/filtering",
+      "destination": "/knowledge/concepts/filters/filtering"
+    },
+    {
+      "source": "/context/knowledge/filters/filtering-chroma-db",
+      "destination": "/knowledge/concepts/filters/filtering-chroma-db"
+    },
+    {
+      "source": "/context/knowledge/filters/filtering-lance-db",
+      "destination": "/knowledge/concepts/filters/filtering-lance-db"
+    },
+    {
+      "source": "/context/knowledge/filters/filtering-milvus-db",
+      "destination": "/knowledge/concepts/filters/filtering-milvus-db"
+    },
+    {
+      "source": "/context/knowledge/filters/filtering-mongo-db",
+      "destination": "/knowledge/concepts/filters/filtering-mongo-db"
+    },
+    {
+      "source": "/context/knowledge/filters/filtering-on-load",
+      "destination": "/knowledge/concepts/filters/filtering-on-load"
+    },
+    {
+      "source": "/context/knowledge/filters/filtering-pgvector",
+      "destination": "/knowledge/concepts/filters/filtering-pgvector"
+    },
+    {
+      "source": "/context/knowledge/filters/filtering-pinecone",
+      "destination": "/knowledge/concepts/filters/filtering-pinecone"
+    },
+    {
+      "source": "/context/knowledge/filters/filtering-qdrant-db",
+      "destination": "/knowledge/concepts/filters/filtering-qdrant-db"
+    },
+    {
+      "source": "/context/knowledge/filters/filtering-surreal-db",
+      "destination": "/knowledge/concepts/filters/filtering-surreal-db"
+    },
+    {
+      "source": "/context/knowledge/filters/filtering-weaviate",
+      "destination": "/knowledge/concepts/filters/filtering-weaviate"
+    },
+    {
+      "source": "/context/knowledge/filters/filtering-with-invalid-keys",
+      "destination": "/knowledge/concepts/filters/filtering-with-invalid-keys"
+    },
+    {
+      "source": "/context/knowledge/readers/arxiv-reader",
+      "destination": "/knowledge/concepts/readers/arxiv-reader"
+    },
+    {
+      "source": "/context/knowledge/readers/arxiv-reader-async",
+      "destination": "/knowledge/concepts/readers/arxiv-reader-async"
+    },
+    {
+      "source": "/context/knowledge/readers/csv-reader",
+      "destination": "/knowledge/concepts/readers/csv-reader"
+    },
+    {
+      "source": "/context/knowledge/readers/csv-reader-async",
+      "destination": "/knowledge/concepts/readers/csv-reader-async"
+    },
+    {
+      "source": "/context/knowledge/readers/csv-url-reader",
+      "destination": "/knowledge/concepts/readers/csv-url-reader"
+    },
+    {
+      "source": "/context/knowledge/readers/field-labeled-csv-reader",
+      "destination": "/knowledge/concepts/readers/field-labeled-csv-reader"
+    },
+    {
+      "source": "/context/knowledge/readers/firecrawl-reader",
+      "destination": "/knowledge/concepts/readers/firecrawl-reader"
+    },
+    {
+      "source": "/context/knowledge/readers/firecrawl-reader-async",
+      "destination": "/knowledge/concepts/readers/firecrawl-reader-async"
+    },
+    {
+      "source": "/context/knowledge/readers/json-reader",
+      "destination": "/knowledge/concepts/readers/json-reader"
+    },
+    {
+      "source": "/context/knowledge/readers/json-reader-async",
+      "destination": "/knowledge/concepts/readers/json-reader-async"
+    },
+    {
+      "source": "/context/knowledge/readers/markdown-reader",
+      "destination": "/knowledge/concepts/readers/markdown-reader"
+    },
+    {
+      "source": "/context/knowledge/readers/markdown-reader-async",
+      "destination": "/knowledge/concepts/readers/markdown-reader-async"
+    },
+    {
+      "source": "/context/knowledge/readers/pdf-password-reader",
+      "destination": "/knowledge/concepts/readers/pdf-password-reader"
+    },
+    {
+      "source": "/context/knowledge/readers/pdf-reader",
+      "destination": "/knowledge/concepts/readers/pdf-reader"
+    },
+    {
+      "source": "/context/knowledge/readers/pdf-reader-async",
+      "destination": "/knowledge/concepts/readers/pdf-reader-async"
+    },
+    {
+      "source": "/context/knowledge/readers/pdf-url-password-reader",
+      "destination": "/knowledge/concepts/readers/pdf-url-password-reader"
+    },
+    {
+      "source": "/context/knowledge/readers/pptx-reader",
+      "destination": "/knowledge/concepts/readers/pptx-reader"
+    },
+    {
+      "source": "/context/knowledge/readers/pptx-reader-async",
+      "destination": "/knowledge/concepts/readers/pptx-reader-async"
+    },
+    {
+      "source": "/context/knowledge/readers/web-search-reader",
+      "destination": "/knowledge/concepts/readers/web-search-reader"
+    },
+    {
+      "source": "/context/knowledge/readers/web-search-reader-async",
+      "destination": "/knowledge/concepts/readers/web-search-reader-async"
+    },
+    {
+      "source": "/context/knowledge/readers/website-reader",
+      "destination": "/knowledge/concepts/readers/website-reader"
+    },
+    {
+      "source": "/context/knowledge/readers/website-reader-async",
+      "destination": "/knowledge/concepts/readers/website-reader-async"
+    },
+    {
+      "source": "/context/knowledge/readers/wikipedia-reader",
+      "destination": "/knowledge/concepts/readers/wikipedia-reader"
+    },
+    {
+      "source": "/context/knowledge/readers/wikipedia-reader-async",
+      "destination": "/knowledge/concepts/readers/wikipedia-reader-async"
+    },
+    {
+      "source": "/context/knowledge/readers/youtube-reader",
+      "destination": "/knowledge/concepts/readers/youtube-reader"
+    },
+    {
+      "source": "/context/knowledge/readers/youtube-reader-async",
+      "destination": "/knowledge/concepts/readers/youtube-reader-async"
+    },
+    {
+      "source": "/context/knowledge/search-and-retrieval/agentic-rag",
+      "destination": "/knowledge/concepts/search-and-retrieval/agentic-rag"
+    },
+    {
+      "source": "/context/knowledge/search-and-retrieval/agentic-rag-infinity-reranker",
+      "destination": "/knowledge/concepts/search-and-retrieval/agentic-rag-infinity-reranker"
+    },
+    {
+      "source": "/context/knowledge/search-and-retrieval/agentic-rag-lancedb",
+      "destination": "/knowledge/concepts/search-and-retrieval/agentic-rag-lancedb"
+    },
+    {
+      "source": "/context/knowledge/search-and-retrieval/agentic-rag-pgvector",
+      "destination": "/knowledge/concepts/search-and-retrieval/agentic-rag-pgvector"
+    },
+    {
+      "source": "/context/knowledge/search-and-retrieval/agentic-rag-with-lightrag",
+      "destination": "/knowledge/concepts/search-and-retrieval/agentic-rag-with-lightrag"
+    },
+    {
+      "source": "/context/knowledge/search-and-retrieval/agentic-rag-with-reasoning",
+      "destination": "/knowledge/concepts/search-and-retrieval/agentic-rag-with-reasoning"
+    },
+    {
+      "source": "/context/knowledge/search-and-retrieval/agentic-rag-with-reranking",
+      "destination": "/knowledge/concepts/search-and-retrieval/agentic-rag-with-reranking"
+    },
+    {
+      "source": "/context/knowledge/search-and-retrieval/async-custom-retriever",
+      "destination": "/knowledge/concepts/search-and-retrieval/async-custom-retriever"
+    },
+    {
+      "source": "/context/knowledge/search-and-retrieval/custom-retriever",
+      "destination": "/knowledge/concepts/search-and-retrieval/custom-retriever"
+    },
+    {
+      "source": "/context/knowledge/search-and-retrieval/hybrid-search",
+      "destination": "/knowledge/concepts/search-and-retrieval/hybrid-search"
+    },
+    {
+      "source": "/context/knowledge/search-and-retrieval/keyword-search",
+      "destination": "/knowledge/concepts/search-and-retrieval/keyword-search"
+    },
+    {
+      "source": "/context/knowledge/search-and-retrieval/rag-sentence-transformer",
+      "destination": "/knowledge/concepts/search-and-retrieval/rag-sentence-transformer"
+    },
+    {
+      "source": "/context/knowledge/search-and-retrieval/rag-with-lance-db-and-sqlite",
+      "destination": "/knowledge/concepts/search-and-retrieval/rag-with-lance-db-and-sqlite"
+    },
+    {
+      "source": "/context/knowledge/search-and-retrieval/traditional-rag-lancedb",
+      "destination": "/knowledge/concepts/search-and-retrieval/traditional-rag-lancedb"
+    },
+    {
+      "source": "/context/knowledge/search-and-retrieval/traditional-rag-pgvector",
+      "destination": "/knowledge/concepts/search-and-retrieval/traditional-rag-pgvector"
+    },
+    {
+      "source": "/context/knowledge/search-and-retrieval/vector-search",
+      "destination": "/knowledge/concepts/search-and-retrieval/vector-search"
+    },
+    {
+      "source": "/deploy/agno-infra",
+      "destination": "/infra/overview"
+    },
+    {
+      "source": "/deploy/templates/aws/customize/ci-cd",
+      "destination": "/deploy/templates/aws/configure/overview"
+    },
+    {
+      "source": "/deploy/templates/aws/customize/domain-https",
+      "destination": "/deploy/templates/aws/configure/overview"
+    },
+    {
+      "source": "/deploy/templates/aws/customize/env-vars",
+      "destination": "/deploy/templates/aws/configure/overview"
+    },
+    {
+      "source": "/deploy/templates/aws/customize/secrets",
+      "destination": "/deploy/templates/aws/configure/overview"
+    },
+    {
+      "source": "/deploy/templates/aws/overview",
+      "destination": "/deploy/templates/aws/configure/overview"
+    },
+    {
+      "source": "/deploy/templates/docker/overview",
+      "destination": "/deploy/templates/docker/deploy"
+    },
+    {
+      "source": "/deploy/templates/railway/overview",
+      "destination": "/deploy/templates/railway/deploy"
+    },
+    {
+      "source": "/examples/agent-os/advanced-demo/-agents",
+      "destination": "/examples/agent-os/advanced-demo/agents"
+    },
+    {
+      "source": "/examples/agent-os/advanced-demo/-teams",
+      "destination": "/examples/agent-os/advanced-demo/teams"
+    },
+    {
+      "source": "/examples/agents/agno-assist",
+      "destination": "/cookbook/agents/agno-assist"
+    },
+    {
+      "source": "/examples/agents/airbnb_mcp",
+      "destination": "/cookbook/agents/airbnb_mcp"
+    },
+    {
+      "source": "/examples/agents/competitor-analysis-agent",
+      "destination": "/cookbook/agents/competitor-analysis-agent"
+    },
+    {
+      "source": "/examples/agents/deep_knowledge",
+      "destination": "/cookbook/agents/deep_knowledge"
+    },
+    {
+      "source": "/examples/agents/overview",
+      "destination": "/cookbook/agents/overview"
+    },
+    {
+      "source": "/examples/agents/quickstart/agent-with-instructions",
+      "destination": "/examples/agents/basics/agent-with-instructions"
+    },
+    {
+      "source": "/examples/agents/quickstart/agent-with-tools",
+      "destination": "/examples/agents/basics/agent-with-tools"
+    },
+    {
+      "source": "/examples/agents/quickstart/basic-agent",
+      "destination": "/examples/agents/basics/basic-agent"
+    },
+    {
+      "source": "/examples/agents/quickstart/overview",
+      "destination": "/examples/agents/basics/overview"
+    },
+    {
+      "source": "/examples/agents/research-agent",
+      "destination": "/cookbook/agents/research-agent"
+    },
+    {
+      "source": "/examples/agents/social_media_agent",
+      "destination": "/cookbook/agents/social_media_agent"
+    },
+    {
+      "source": "/examples/agents/speech-to-text-agent",
+      "destination": "/cookbook/agents/speech-to-text-agent"
+    },
+    {
+      "source": "/examples/agents/startup-analyst-agent",
+      "destination": "/cookbook/agents/startup-analyst-agent"
+    },
+    {
+      "source": "/examples/agents/translation_agent",
+      "destination": "/cookbook/agents/translation_agent"
+    },
+    {
+      "source": "/examples/agents/web-extraction-agent",
+      "destination": "/cookbook/agents/web-extraction-agent"
+    },
+    {
+      "source": "/examples/agents/youtube-agent",
+      "destination": "/cookbook/agents/youtube-agent"
+    },
+    {
+      "source": "/examples/knowledge/chunking",
+      "destination": "/cookbook/knowledge/chunking"
+    },
+    {
+      "source": "/examples/knowledge/embedders",
+      "destination": "/cookbook/knowledge/embedders"
+    },
+    {
+      "source": "/examples/knowledge/overview",
+      "destination": "/cookbook/knowledge/overview"
+    },
+    {
+      "source": "/examples/knowledge/readers",
+      "destination": "/cookbook/knowledge/readers"
+    },
+    {
+      "source": "/examples/knowledge/vector-databases",
+      "destination": "/cookbook/knowledge/vector-databases"
+    },
+    {
+      "source": "/examples/learning/overview",
+      "destination": "/cookbook/learning/overview"
+    },
+    {
+      "source": "/examples/learning/personal-assistant",
+      "destination": "/cookbook/learning/personal-assistant"
+    },
+    {
+      "source": "/examples/learning/support-agent",
+      "destination": "/cookbook/learning/support-agent"
+    },
+    {
+      "source": "/examples/overview",
+      "destination": "/cookbook/overview"
+    },
+    {
+      "source": "/examples/quickstart/agent-search-over-knowledge",
+      "destination": "/examples/basics/agent-search-over-knowledge"
+    },
+    {
+      "source": "/examples/quickstart/agent-with-guardrails",
+      "destination": "/examples/basics/agent-with-guardrails"
+    },
+    {
+      "source": "/examples/quickstart/agent-with-memory",
+      "destination": "/examples/basics/agent-with-memory"
+    },
+    {
+      "source": "/examples/quickstart/agent-with-state-management",
+      "destination": "/examples/basics/agent-with-state-management"
+    },
+    {
+      "source": "/examples/quickstart/agent-with-storage",
+      "destination": "/examples/basics/agent-with-storage"
+    },
+    {
+      "source": "/examples/quickstart/agent-with-structured-output",
+      "destination": "/examples/basics/agent-with-structured-output"
+    },
+    {
+      "source": "/examples/quickstart/agent-with-tools",
+      "destination": "/examples/basics/agent-with-tools"
+    },
+    {
+      "source": "/examples/quickstart/agent-with-typed-input-output",
+      "destination": "/examples/basics/agent-with-typed-input-output"
+    },
+    {
+      "source": "/examples/quickstart/custom-tool-for-self-learning",
+      "destination": "/examples/basics/custom-tool-for-self-learning"
+    },
+    {
+      "source": "/examples/quickstart/human-in-the-loop",
+      "destination": "/examples/basics/human-in-the-loop"
+    },
+    {
+      "source": "/examples/quickstart/multi-agent-team",
+      "destination": "/examples/basics/multi-agent-team"
+    },
+    {
+      "source": "/examples/quickstart/overview",
+      "destination": "/examples/basics/overview"
+    },
+    {
+      "source": "/examples/quickstart/run",
+      "destination": "/examples/basics/run"
+    },
+    {
+      "source": "/examples/quickstart/sequential-workflow",
+      "destination": "/examples/basics/sequential-workflow"
+    },
+    {
+      "source": "/examples/storage/overview",
+      "destination": "/cookbook/storage/overview"
+    },
+    {
+      "source": "/examples/streamlit/agentic-rag",
+      "destination": "/cookbook/streamlit/agentic-rag"
+    },
+    {
+      "source": "/examples/streamlit/answer-engine",
+      "destination": "/cookbook/streamlit/answer-engine"
+    },
+    {
+      "source": "/examples/streamlit/overview",
+      "destination": "/cookbook/streamlit/overview"
+    },
+    {
+      "source": "/examples/streamlit/text-to-sql",
+      "destination": "/cookbook/streamlit/text-to-sql"
+    },
+    {
+      "source": "/examples/teams/ai_support_team",
+      "destination": "/cookbook/teams/ai_support_team"
+    },
+    {
+      "source": "/examples/teams/content_team",
+      "destination": "/cookbook/teams/content_team"
+    },
+    {
+      "source": "/examples/teams/hackernews_team",
+      "destination": "/cookbook/teams/hackernews_team"
+    },
+    {
+      "source": "/examples/teams/news_agency_team",
+      "destination": "/cookbook/teams/news_agency_team"
+    },
+    {
+      "source": "/examples/teams/overview",
+      "destination": "/cookbook/teams/overview"
+    },
+    {
+      "source": "/examples/teams/quickstart/basic-coordination",
+      "destination": "/examples/teams/basics/basic-coordination"
+    },
+    {
+      "source": "/examples/teams/quickstart/broadcast-mode",
+      "destination": "/examples/teams/basics/broadcast-mode"
+    },
+    {
+      "source": "/examples/teams/quickstart/caching/cache-team-response",
+      "destination": "/examples/teams/basics/caching/cache-team-response"
+    },
+    {
+      "source": "/examples/teams/quickstart/caching/overview",
+      "destination": "/examples/teams/basics/caching/overview"
+    },
+    {
+      "source": "/examples/teams/quickstart/concurrent-member-agents",
+      "destination": "/examples/teams/basics/concurrent-member-agents"
+    },
+    {
+      "source": "/examples/teams/quickstart/delegate-to-all-members",
+      "destination": "/examples/teams/basics/delegate-to-all-members"
+    },
+    {
+      "source": "/examples/teams/quickstart/history-of-members",
+      "destination": "/examples/teams/basics/history-of-members"
+    },
+    {
+      "source": "/examples/teams/quickstart/nested-teams",
+      "destination": "/examples/teams/basics/nested-teams"
+    },
+    {
+      "source": "/examples/teams/quickstart/overview",
+      "destination": "/examples/teams/basics/overview"
+    },
+    {
+      "source": "/examples/teams/quickstart/respond-directly-router-team",
+      "destination": "/examples/teams/basics/respond-directly-router-team"
+    },
+    {
+      "source": "/examples/teams/quickstart/respond-directly-with-history",
+      "destination": "/examples/teams/basics/respond-directly-with-history"
+    },
+    {
+      "source": "/examples/teams/quickstart/share-member-interactions",
+      "destination": "/examples/teams/basics/share-member-interactions"
+    },
+    {
+      "source": "/examples/teams/quickstart/task-mode",
+      "destination": "/examples/teams/basics/task-mode"
+    },
+    {
+      "source": "/examples/teams/quickstart/team-history",
+      "destination": "/examples/teams/basics/team-history"
+    },
+    {
+      "source": "/examples/teams/reasoning_team",
+      "destination": "/cookbook/teams/reasoning_team"
+    },
+    {
+      "source": "/examples/tools/built-in",
+      "destination": "/cookbook/tools/built-in"
+    },
+    {
+      "source": "/examples/tools/custom-tools",
+      "destination": "/cookbook/tools/custom-tools"
+    },
+    {
+      "source": "/examples/tools/mcp",
+      "destination": "/cookbook/tools/mcp"
+    },
+    {
+      "source": "/examples/tools/overview",
+      "destination": "/cookbook/tools/overview"
+    },
+    {
+      "source": "/examples/tools/tool-calls-accesing-agent",
+      "destination": "/cookbook/tools/overview"
+    },
+    {
+      "source": "/examples/tools/tool-hooks",
+      "destination": "/cookbook/tools/tool-hooks"
+    },
+    {
+      "source": "/examples/use-cases/agents/agno-assist",
+      "destination": "/cookbook/agents/agno-assist"
+    },
+    {
+      "source": "/examples/use-cases/agents/airbnb_mcp",
+      "destination": "/cookbook/agents/airbnb_mcp"
+    },
+    {
+      "source": "/examples/use-cases/agents/competitor-analysis-agent",
+      "destination": "/cookbook/agents/competitor-analysis-agent"
+    },
+    {
+      "source": "/examples/use-cases/agents/deep_knowledge",
+      "destination": "/cookbook/agents/deep_knowledge"
+    },
+    {
+      "source": "/examples/use-cases/agents/overview",
+      "destination": "/cookbook/agents/overview"
+    },
+    {
+      "source": "/examples/use-cases/agents/research-agent",
+      "destination": "/cookbook/agents/research-agent"
+    },
+    {
+      "source": "/examples/use-cases/agents/social_media_agent",
+      "destination": "/cookbook/agents/social_media_agent"
+    },
+    {
+      "source": "/examples/use-cases/agents/speech-to-text-agent",
+      "destination": "/cookbook/agents/speech-to-text-agent"
+    },
+    {
+      "source": "/examples/use-cases/agents/startup-analyst-agent",
+      "destination": "/cookbook/agents/startup-analyst-agent"
+    },
+    {
+      "source": "/examples/use-cases/agents/translation_agent",
+      "destination": "/cookbook/agents/translation_agent"
+    },
+    {
+      "source": "/examples/use-cases/agents/web-extraction-agent",
+      "destination": "/cookbook/agents/web-extraction-agent"
+    },
+    {
+      "source": "/examples/use-cases/agents/youtube-agent",
+      "destination": "/cookbook/agents/youtube-agent"
+    },
+    {
+      "source": "/examples/use-cases/overview",
+      "destination": "/cookbook/overview"
+    },
+    {
+      "source": "/examples/use-cases/streamlit/agentic-rag",
+      "destination": "/cookbook/streamlit/agentic-rag"
+    },
+    {
+      "source": "/examples/use-cases/streamlit/answer-engine",
+      "destination": "/cookbook/streamlit/answer-engine"
+    },
+    {
+      "source": "/examples/use-cases/streamlit/text-to-sql",
+      "destination": "/cookbook/streamlit/text-to-sql"
+    },
+    {
+      "source": "/examples/use-cases/teams/ai_support_team",
+      "destination": "/cookbook/teams/ai_support_team"
+    },
+    {
+      "source": "/examples/use-cases/teams/content_team",
+      "destination": "/cookbook/teams/content_team"
+    },
+    {
+      "source": "/examples/use-cases/teams/hackernews_team",
+      "destination": "/cookbook/teams/hackernews_team"
+    },
+    {
+      "source": "/examples/use-cases/teams/news_agency_team",
+      "destination": "/cookbook/teams/news_agency_team"
+    },
+    {
+      "source": "/examples/use-cases/teams/overview",
+      "destination": "/cookbook/teams/overview"
+    },
+    {
+      "source": "/examples/use-cases/teams/reasoning_team",
+      "destination": "/cookbook/teams/reasoning_team"
+    },
+    {
+      "source": "/examples/use-cases/workflows/blog-post-generator",
+      "destination": "/cookbook/workflows/blog-post-generator"
+    },
+    {
+      "source": "/examples/use-cases/workflows/company-description",
+      "destination": "/cookbook/workflows/company-description"
+    },
+    {
+      "source": "/examples/use-cases/workflows/employee-recruiter",
+      "destination": "/cookbook/workflows/employee-recruiter"
+    },
+    {
+      "source": "/examples/use-cases/workflows/notion-knowledge-manager",
+      "destination": "/cookbook/workflows/notion-knowledge-manager"
+    },
+    {
+      "source": "/examples/use-cases/workflows/overview",
+      "destination": "/cookbook/workflows/overview"
+    },
+    {
+      "source": "/examples/workflows/blog-post-generator",
+      "destination": "/cookbook/workflows/blog-post-generator"
+    },
+    {
+      "source": "/examples/workflows/company-description",
+      "destination": "/cookbook/workflows/company-description"
+    },
+    {
+      "source": "/examples/workflows/employee-recruiter",
+      "destination": "/cookbook/workflows/employee-recruiter"
+    },
+    {
+      "source": "/examples/workflows/notion-knowledge-manager",
+      "destination": "/cookbook/workflows/notion-knowledge-manager"
+    },
+    {
+      "source": "/examples/workflows/overview",
+      "destination": "/cookbook/workflows/overview"
+    },
+    {
+      "source": "/features/evals/telemetry",
+      "destination": "/telemetry"
+    },
+    {
+      "source": "/get-started/performance",
+      "destination": "/performance"
+    },
+    {
+      "source": "/how-to/contribute",
+      "destination": "/other/contribute"
+    },
+    {
+      "source": "/how-to/cursor-rules",
+      "destination": "/other/cursor-rules"
+    },
+    {
+      "source": "/how-to/install",
+      "destination": "/other/install"
+    },
+    {
+      "source": "/how-to/v2-changelog",
+      "destination": "/other/v2-changelog"
+    },
+    {
+      "source": "/how-to/v2-migration",
+      "destination": "/other/v2-migration"
+    },
+    {
+      "source": "/how-to/workflows-migration",
+      "destination": "/other/workflows-migration"
+    },
+    {
+      "source": "/integrations/database/index",
+      "destination": "/database/providers/overview"
+    },
+    {
+      "source": "/knowledge/concepts/content-db",
+      "destination": "/knowledge/concepts/overview"
+    },
+    {
+      "source": "/knowledge/getting-started",
+      "destination": "/knowledge/overview"
+    },
+    {
+      "source": "/learning/getting-started",
+      "destination": "/learning/overview"
+    },
+    {
+      "source": "/models/providers/local/ollama/usage/db",
+      "destination": "/models/providers/local/ollama/overview"
+    },
+    {
+      "source": "/multimodal/agent/usage/video-caption-agent",
+      "destination": "/multimodal/agent/usage/video-caption"
+    },
+    {
+      "source": "/multimodal/audio/audio_generation",
+      "destination": "/multimodal/agent/usage/audio_generation"
+    },
+    {
+      "source": "/multimodal/audio/audio_input",
+      "destination": "/multimodal/agent/usage/audio_input"
+    },
+    {
+      "source": "/multimodal/audio/audio_output",
+      "destination": "/multimodal/agent/usage/audio_output"
+    },
+    {
+      "source": "/multimodal/audio/speech-to-text",
+      "destination": "/multimodal/overview"
+    },
+    {
+      "source": "/multimodal/audio/usage/audio-input-output",
+      "destination": "/multimodal/agent/usage/audio_input"
+    },
+    {
+      "source": "/multimodal/audio/usage/audio-multi-turn",
+      "destination": "/multimodal/agent/usage/audio_input"
+    },
+    {
+      "source": "/multimodal/audio/usage/audio-sentiment-analysis",
+      "destination": "/multimodal/agent/usage/audio_input"
+    },
+    {
+      "source": "/multimodal/audio/usage/audio-streaming",
+      "destination": "/multimodal/agent/usage/audio_output"
+    },
+    {
+      "source": "/multimodal/audio/usage/audio-to-text",
+      "destination": "/multimodal/agent/usage/audio_input"
+    },
+    {
+      "source": "/multimodal/audio/usage/blog-to-podcast",
+      "destination": "/multimodal/agent/usage/blog-to-podcast"
+    },
+    {
+      "source": "/multimodal/audio/usage/generate-music-agent",
+      "destination": "/multimodal/agent/usage/generate-music-agent"
+    },
+    {
+      "source": "/multimodal/files/file_generation",
+      "destination": "/multimodal/agent/usage/file_generation"
+    },
+    {
+      "source": "/multimodal/files/file_input",
+      "destination": "/multimodal/agent/usage/file_input"
+    },
+    {
+      "source": "/multimodal/images/image-generation",
+      "destination": "/multimodal/agent/usage/image-generation"
+    },
+    {
+      "source": "/multimodal/images/image-input",
+      "destination": "/multimodal/agent/usage/image-input"
+    },
+    {
+      "source": "/multimodal/images/image-output",
+      "destination": "/multimodal/agent/usage/image-output"
+    },
+    {
+      "source": "/multimodal/images/usage/generate-image",
+      "destination": "/multimodal/agent/usage/generate-image"
+    },
+    {
+      "source": "/multimodal/images/usage/image-to-audio",
+      "destination": "/multimodal/agent/usage/image-input"
+    },
+    {
+      "source": "/multimodal/images/usage/image-to-image",
+      "destination": "/multimodal/agent/usage/image-input"
+    },
+    {
+      "source": "/multimodal/images/usage/image-to-text",
+      "destination": "/multimodal/agent/usage/image-input"
+    },
+    {
+      "source": "/multimodal/video/usage/generate-video-models-lab",
+      "destination": "/multimodal/agent/usage/video_generation"
+    },
+    {
+      "source": "/multimodal/video/usage/generate-video-replicate",
+      "destination": "/multimodal/agent/usage/video_generation"
+    },
+    {
+      "source": "/multimodal/video/usage/video-caption",
+      "destination": "/multimodal/agent/usage/video-caption"
+    },
+    {
+      "source": "/multimodal/video/usage/video-to-shorts",
+      "destination": "/multimodal/agent/usage/video_input"
+    },
+    {
+      "source": "/multimodal/video/video_generation",
+      "destination": "/multimodal/agent/usage/video_generation"
+    },
+    {
+      "source": "/multimodal/video/video_input",
+      "destination": "/multimodal/agent/usage/video_input"
+    },
+    {
+      "source": "/production/aws/ci-cd",
+      "destination": "/production/templates/customize-aws/ci-cd"
+    },
+    {
+      "source": "/production/aws/database-tables",
+      "destination": "/production/templates/customize-aws/database-tables"
+    },
+    {
+      "source": "/production/aws/development-app",
+      "destination": "/production/templates/customize-aws/development-app"
+    },
+    {
+      "source": "/production/aws/domain-https",
+      "destination": "/production/templates/customize-aws/domain-https"
+    },
+    {
+      "source": "/production/aws/env-vars",
+      "destination": "/production/templates/customize-aws/env-vars"
+    },
+    {
+      "source": "/production/aws/format-and-validate",
+      "destination": "/production/templates/customize-aws/format-and-validate"
+    },
+    {
+      "source": "/production/aws/git-repo",
+      "destination": "/production/templates/customize-aws/git-repo"
+    },
+    {
+      "source": "/production/aws/infra-settings",
+      "destination": "/production/templates/customize-aws/infra-settings"
+    },
+    {
+      "source": "/production/aws/install",
+      "destination": "/production/templates/customize-aws/install"
+    },
+    {
+      "source": "/production/aws/new-users",
+      "destination": "/production/templates/customize-aws/new-users"
+    },
+    {
+      "source": "/production/aws/production-app",
+      "destination": "/production/templates/customize-aws/production-app"
+    },
+    {
+      "source": "/production/aws/python-packages",
+      "destination": "/production/templates/customize-aws/python-packages"
+    },
+    {
+      "source": "/production/aws/secrets",
+      "destination": "/production/templates/customize-aws/secrets"
+    },
+    {
+      "source": "/production/aws/ssh-access",
+      "destination": "/production/templates/customize-aws/ssh-access"
+    },
+    {
+      "source": "/reference-api/schema/components/create-config",
+      "destination": "/reference-api/overview"
+    },
+    {
+      "source": "/reference-api/schema/components/set-current-config",
+      "destination": "/reference-api/overview"
+    },
+    {
+      "source": "/reference-api/schema/components/update-config",
+      "destination": "/reference-api/overview"
+    },
+    {
+      "source": "/reference-api/schema/tracing/get-trace-detail",
+      "destination": "/reference-api/schema/traces/get-trace-or-span-detail"
+    },
+    {
+      "source": "/reference-api/schema/tracing/get-trace-session-stats",
+      "destination": "/reference-api/schema/traces/get-trace-statistics-by-session"
+    },
+    {
+      "source": "/reference-api/schema/tracing/list-traces",
+      "destination": "/reference-api/schema/traces/list-traces"
+    },
+    {
+      "source": "/reference/agent-os/a2a-client",
+      "destination": "/reference/clients/a2a-client"
+    },
+    {
+      "source": "/reference/agent-os/client",
+      "destination": "/reference/clients/agentos-client"
+    },
+    {
+      "source": "/deploy/templates/aws/customize/overview",
+      "destination": "/deploy/templates/aws/configure/overview"
+    },
+    {
+      "source": "/deploy/templates/aws/customize/database-tables",
+      "destination": "/deploy/templates/aws/configure/database-tables"
+    },
+    {
+      "source": "/deploy/templates/aws/customize/development-app",
+      "destination": "/deploy/templates/aws/configure/development-app"
+    },
+    {
+      "source": "/deploy/templates/aws/customize/format-and-validate",
+      "destination": "/deploy/templates/aws/configure/format-and-validate"
+    },
+    {
+      "source": "/deploy/templates/aws/customize/git-repo",
+      "destination": "/deploy/templates/aws/configure/git-repo"
+    },
+    {
+      "source": "/deploy/templates/aws/customize/infra-settings",
+      "destination": "/deploy/templates/aws/configure/infra-settings"
+    },
+    {
+      "source": "/deploy/templates/aws/customize/install",
+      "destination": "/deploy/templates/aws/configure/install"
+    },
+    {
+      "source": "/deploy/templates/aws/customize/new-users",
+      "destination": "/deploy/templates/aws/configure/new-users"
+    },
+    {
+      "source": "/deploy/templates/aws/customize/production-app",
+      "destination": "/deploy/templates/aws/configure/production-app"
+    },
+    {
+      "source": "/deploy/templates/aws/customize/python-packages",
+      "destination": "/deploy/templates/aws/configure/python-packages"
+    },
+    {
+      "source": "/deploy/templates/aws/customize/ssh-access",
+      "destination": "/deploy/templates/aws/configure/ssh-access"
     }
   ]
 }
