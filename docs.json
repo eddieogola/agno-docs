@@ -12,7 +12,7 @@
     "options": [
       "copy",
       "mcp",
-      "cursor", 
+      "cursor",
       "chatgpt",
       "claude"
     ]
@@ -92,7 +92,7 @@
           {
             "group": "Get Started",
             "pages": [
-              "introduction", 
+              "introduction",
               "first-agent"
             ]
           },
@@ -2246,7 +2246,7 @@
                 "group": "Context Compression",
                 "tag": "BETA",
                 "pages": [
-                  "compression/overview", 
+                  "compression/overview",
                   "compression/token-counting"
                 ]
               },
@@ -3804,11 +3804,15 @@
                   },
                   {
                     "group": "Supabase",
-                    "pages": ["database/providers/supabase/overview"]
+                    "pages": [
+                      "database/providers/supabase/overview"
+                    ]
                   },
                   {
                     "group": "Neon",
-                    "pages": ["database/providers/neon/overview"]
+                    "pages": [
+                      "database/providers/neon/overview"
+                    ]
                   },
                   "database/providers/selecting-tables"
                 ]
@@ -4090,7 +4094,9 @@
               {
                 "group": "Culture",
                 "tag": "experimental",
-                "pages": ["culture/overview"]
+                "pages": [
+                  "culture/overview"
+                ]
               },
               "custom-logging"
             ]
@@ -4124,7 +4130,9 @@
                 "pages": [
                   {
                     "group": "Memory",
-                    "pages": ["integrations/memory/memori"]
+                    "pages": [
+                      "integrations/memory/memori"
+                    ]
                   },
                   {
                     "group": "Discord Bot",
@@ -4146,13 +4154,17 @@
                       "integrations/testing/overview",
                       {
                         "group": "Usage",
-                        "pages": ["integrations/testing/usage/basic"]
+                        "pages": [
+                          "integrations/testing/usage/basic"
+                        ]
                       }
                     ]
                   },
                   {
                     "group": "Governance",
-                    "pages": ["integrations/governance/agentsystems-notary"]
+                    "pages": [
+                      "integrations/governance/agentsystems-notary"
+                    ]
                   }
                 ]
               },
@@ -4161,7 +4173,9 @@
                 "pages": [
                   {
                     "group": "Agno v2 Migration",
-                    "pages": ["other/v2-migration", "other/v2-changelog"]
+                    "pages": [
+                      "other/v2-migration",
+                      "other/v2-changelog"]
                   },
                   "other/database-migrations",
                   "other/workflows-migration"
