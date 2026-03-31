@@ -9,7 +9,13 @@
   },
   "favicon": "/favicon.png",
   "contextual": {
-    "options": ["copy", "mcp", "cursor", "chatgpt", "claude"]
+    "options": [
+      "copy", 
+      "mcp", 
+      "cursor", 
+      "chatgpt", 
+      "claude"
+    ]
   },
   "logo": {
     "light": "/logo/black.svg",
@@ -74,7 +80,9 @@
         "groups": [
           {
             "group": "Overview",
-            "pages": ["index"]
+            "pages": [
+              "index"
+            ]
           }
         ]
       },
@@ -83,7 +91,10 @@
         "groups": [
           {
             "group": "Get Started",
-            "pages": ["introduction", "first-agent"]
+            "pages": [
+              "introduction", 
+              "first-agent"
+            ]
           },
           {
             "group": "Basics",
@@ -481,11 +492,15 @@
                       },
                       {
                         "group": "Supabase",
-                        "pages": ["database/providers/supabase/overview"]
+                        "pages": [
+                          "database/providers/supabase/overview"
+                        ]
                       },
                       {
                         "group": "Neon",
-                        "pages": ["database/providers/neon/overview"]
+                        "pages": [
+                          "database/providers/neon/overview"
+                        ]
                       },
                       "database/providers/selecting-tables"
                     ]
@@ -2115,7 +2130,9 @@
                           "sessions/metrics/team",
                           {
                             "group": "Usage",
-                            "pages": ["sessions/metrics/usage/team-metrics"]
+                            "pages": [
+                              "sessions/metrics/usage/team-metrics"
+                            ]
                           }
                         ]
                       },
@@ -2228,7 +2245,10 @@
               {
                 "group": "Context Compression",
                 "tag": "BETA",
-                "pages": ["compression/overview", "compression/token-counting"]
+                "pages": [
+                  "compression/overview", 
+                  "compression/token-counting"
+                ]
               },
               {
                 "group": "Dependency Injection",
@@ -2346,7 +2366,9 @@
                           },
                           {
                             "group": "Ollama",
-                            "pages": ["reasoning/usage/models/ollama/ollama"]
+                            "pages": [
+                              "reasoning/usage/models/ollama/ollama"
+                            ]
                           },
                           {
                             "group": "OpenAI",
@@ -2464,7 +2486,9 @@
                       },
                       {
                         "group": "Files",
-                        "pages": ["multimodal/agent/usage/file-input-for-tool"]
+                        "pages": [
+                          "multimodal/agent/usage/file-input-for-tool"
+                        ]
                       }
                     ]
                   },
